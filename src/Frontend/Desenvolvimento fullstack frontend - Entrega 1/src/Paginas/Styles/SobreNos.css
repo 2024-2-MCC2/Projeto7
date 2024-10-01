@@ -1,0 +1,16 @@
+.sobre{ 
+
+    background-color: #d1ffce; 
+    text-align: left;
+    color: black;
+    height:auto;
+    /* vai alterar a imagem e o fundo */
+}
+.Imagem{
+    height: 400px;
+}
+.texto{
+    text-align: center;
+    background-color: #d1ffce; 
+}
+

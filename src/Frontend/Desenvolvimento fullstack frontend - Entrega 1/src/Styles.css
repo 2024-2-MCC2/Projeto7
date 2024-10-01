@@ -1,0 +1,96 @@
+*{
+    box-sizing:border-box;
+    font-size: .25;
+    font-family: 'Times New Roman', Times, serif;
+    color: #00a690; /*esse muda tanto dos navbar quanto do texto dentro da página*/
+}
+
+body{
+    margin: 0;
+    text-align: center;
+}
+
+/* .container{
+    margin: 1.5rem;
+    text-align: center;
+} */
+.Cadastro{
+    align-items: center;
+     font-size: 2rem;
+     text-decoration: none;
+     box-sizing:content-box;
+     background-color:#2b9b7d;
+     text-align: center;
+     gap: .25rem;
+
+}
+
+.Cadastro:hover{
+    background-color: rgb(96, 173, 173);
+}
+
+.Login{
+    align-items: center ;
+    font-size: 2rem;
+    gap: .25rem;
+   background-color:#dbfef8;
+   color: #52766e;
+}
+
+.Login:hover{
+    background-color: #459152;
+}
+
+.Donate{
+    align-items:center;
+    font-size: 2rem;
+    gap: .25rem;
+    background-color: rgb(255, 0, 0);
+}
+
+.Donate:hover{
+    background-color: firebrick;
+}
+
+
+.nav{
+    box-sizing: content-box;
+    background-color: #1a3819;
+    color:#000000; /*muda o titulo, donate, login e cadastro */
+    display:flex;
+    /* justify-content: space-between; */
+    align-items:center;
+    gap: 1rem; 
+    padding: 0 1rem;
+    font-size: 2rem;
+}
+
+.nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav a{
+  color: inherit;   
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .90rem;
+}
+
+.nav li:active{
+    background-color: #009919;
+}
+
+.nav li:hover{
+    background-color: #003308;
+}
+.Logo{
+    width: 200px;
+}
+
