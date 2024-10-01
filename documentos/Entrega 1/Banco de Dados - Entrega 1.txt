@@ -1,0 +1,1 @@
+	O grupo optou por usar o programa MYSQL por alguns motivos. O primeiro motivo, é o fato de ser open source, ou seja, é gratuito para usarmos. O app, também é conhecido pela sua velocidade e desempenho, assim como a fácil integração com outras linguagens. E principalmente pelo fato de já termos maior familiaridade com a plataforma, devido às aulas da grade no curso. 
