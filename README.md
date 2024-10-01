@@ -33,6 +33,10 @@ Levando em conta o item acima, o projeto ShelterBox fundado em 2000, tem como ob
   O projeto contará com páginas de navegação informativas, e página de cadastro/login. Com o objetivo de mostrar onde a equipe da organização atua no mundo, e como eles ajudam a população necessitada. Também será possível fazer uma doação diretamente para a ong, caso o usuário deseje.
 </p>
 
+## Protótipo Figma
+<img src="https://camo.githubusercontent.com/63611e6b7e574d3125358b44c0dcd71f4381d55d8605a15a3e321d3cb9191967/68747470733a2f2f696d672e69636f6e73382e636f6d2f3f73697a653d3130302669643d7a6648525a3669315767305526666f726d61743d706e6726636f6c6f723d303030303030" alt="Logo Figma" border="0">
+<a href="https://www.figma.com/design/3N4St1EuDtcVrhAeGg1IUp/Protótipo-Navegável?node-id=0-1&node-type=canvas&t=1VXFswpVIWUk31Z9-0">Protótipo Navegável
+
 
 ## 🛠 Estrutura de pastas
 
