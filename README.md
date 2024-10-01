@@ -4,28 +4,35 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Nome do Projeto
+# ShelterBox
 
-## Nome do Grupo
+## Grupo 5/7
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Felipe Wakasa</a>, <a href="https://www.linkedin.com/in/gabriel-davanço-5543992b8/">Gabriel Davanço</a>, <a href="https://www.linkedin.com/in/victorbarq/">Isadora Santoma</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Prof. David Lemes</a>, <a href="https://www.linkedin.com/in/victorbarq/">Prof. Victor Rosetti</a>, <a href="https://www.linkedin.com/in/victorbarq/">Prof. Francisco Escobar</a>
 
 ## Descrição
+Baseado na ODS de número 10: redução das desigualdades, que tem como objetivo: “Reduzir as desigualdades no interior dos países e entre países”. O item 10.b no site da ONU, diz:
+
+10.b: Incentivar a assistência oficial ao desenvolvimento e fluxos financeiros, incluindo o investimento externo direto, para os Estados onde a necessidade é maior, em particular os países menos desenvolvidos, os países africanos, os pequenos Estados insulares em desenvolvimento e os países em desenvolvimento sem litoral, de acordo com seus planos e programas nacionais.
+
+Levando em conta o item acima, o projeto ShelterBox fundado em 2000, tem como objetivo trazer abrigo e um estilo de vida minimamente digno para todos aqueles que não os possuem mais, devido a diversos fatores, entre eles: Guerras, desastres naturais e pobreza extrema. Nosso grupo, tem como objetivo capturar esse
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<img src="https://d1h79zlghft2zs.cloudfront.net/uploads/2019/07/6915-768x193.png" alt="Logo do Site" border="0">
+
+  WebSite feito por <a href="https://shelterbox.org">ShelterBox.org</a> 
 </p>
 
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
+<p> 
+   O projeto é uma recriação do site linkado acima, serãp adicionado alguns itens que o grupo julgou como interessantes, como um mapa interativo para que o usúario tenha uma forma mais visual de interagir com o site. E da mesma forma, também serão retiradas algumas páginas, uma vez que não há tempo nem pessoas o suficiente, para fazer algo tão elaborado.
+</p>
+<p>
+  O projeto contará com páginas de navegação informativas, e página de cadastro/login. Com o objetivo de mostrar onde a equipe da organização atua no mundo, e como eles ajudam a população necessitada. Também será possível fazer uma doação diretamente para a ong, caso o usuário deseje.
+</p>
+
 
 ## 🛠 Estrutura de pastas
 
