@@ -8,7 +8,7 @@
 
 ## Grupo 5/7
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Felipe Wakasa</a>, <a href="https://www.linkedin.com/in/gabriel-davanço-5543992b8/">Gabriel Davanço</a>, <a href="https://www.linkedin.com/in/victorbarq/">Isadora Santoma</a>
+## Integrantes: <a href="https://github.com/Felipewk7">Felipe Wakasa</a>, <a href="https://www.linkedin.com/in/gabriel-davanço-5543992b8/">Gabriel Davanço</a>, <a href="https://github.com/YourFather0">Isadora Santoma</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Prof. David Lemes</a>, <a href="https://www.linkedin.com/in/victorbarq/">Prof. Victor Rosetti</a>, <a href="https://www.linkedin.com/in/victorbarq/">Prof. Francisco Escobar</a>
 
