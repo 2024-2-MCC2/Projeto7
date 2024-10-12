@@ -1,21 +1,17 @@
 import React from 'react';
-
-// import ShelterBoxComponent from './components/slider/ShelterBoxComponent';
-// import CardGridComponent from './components/CardGridComponent';
-// import HistoriaCard from './components/HistoriaCard'
-//import OndeTrabalhamos from './components/OndeTrabalhamos';
+import ShelterBoxComponent from './ComponentsHome/ShelterBoxComponent';
+import CardGridComponent from './ComponentsHome/CardGridComponent';
+import HistComponent from './ComponentsHome/HistoriaCard.js'
+import OndeTrabalhamos from './ComponentsHome/OndeTrabalhamos';
 
  function Home(){
     return (
 
         <div>
-
-            <h1> aqui é a homepage </h1>
-          {/* <HistoriaCard />
-           <OndeTrabalhamos />
-         <CardGridComponent />
-           <ShelterBoxComponent /> 
-         */}
+          <HistComponent/>
+          <OndeTrabalhamos/>
+          <CardGridComponent/>
+          <ShelterBoxComponent/> 
          </div>
     )
 

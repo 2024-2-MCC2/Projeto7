@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import Logo from '../assets/img/Logo.png';
 import styled from 'styled-components';
 
@@ -140,65 +141,54 @@ background-color: #D9D9D9;
 
 
 
-export default function Navbar (){
-    return(
-<nav className = "nav">
-  <NavContainer>
-    <logo>
-        <a href = "/" className = "Titulo"> 
-        <NavImage src={Logo} alt ="Logo" className = "Logo"/>
-        </a>
-    </logo>
-    
-    <ul>
- <GroupNav>
-       
-      <ButtonNav>
-        <CustomLink href="/historias"> Nosso Trabalho </CustomLink>
-      </ButtonNav>
+export default function Header() {
+  return (
+    <nav className="nav">
+      <NavContainer>
+        <Link to="/">
+          <NavImage src={Logo} alt="Logo" className="Logo" />
+        </Link>
+        
+        <ul>
+          <GroupNav>
+            <ButtonNav>
+              <Link to="/historias">Nosso Trabalho</Link> {/* Substitui <a> por <Link> */}
+            </ButtonNav>
 
-      <ButtonNav>
-        <CustomLink href="/historias"> Historias </CustomLink>
-      </ButtonNav>
+            <ButtonNav>
+              <Link to="/historias">Histórias</Link> {/* Substitui <a> por <Link> */}
+            </ButtonNav>
 
-      <ButtonNav>
-        <CustomLink href="/Nav"> Sobre Nós </CustomLink>
-      </ButtonNav>
+            <ButtonNav>
+              <Link to="/sobre-nos">Sobre Nós</Link> {/* Substitui <a> por <Link> */}
+            </ButtonNav>
 
-      <ButtonNav>
-        <CustomLink href="/historias"> Tome Ação </CustomLink>
-      </ButtonNav>
+            <ButtonNav>
+              <Link to="/historias">Tome Ação</Link> {/* Substitui <a> por <Link> */}
+            </ButtonNav>
+          </GroupNav>
+        </ul>
 
- </GroupNav>
-    </ul>   
+        <ButtonGroup>
+          <TopButtons>
+            <ButtonCadastro>
+              <Link to="/cadastro">Cadastro</Link> {/* Substitui <a> por <Link> */}
+            </ButtonCadastro>
 
-<ButtonGroup>
-  <TopButtons>
+            <ButtonDoar>
+              <Link to="/donate">Donate</Link> {/* Substitui <a> por <Link> */}
+            </ButtonDoar>
 
-      <ButtonCadastro>
-        <a href = "/cadastro" className = "Cadastro">Cadastro</a>
-      </ButtonCadastro>
+            <ButtonLogin>
+              <Link to="/login">Login</Link> {/* Substitui <a> por <Link> */}
+            </ButtonLogin>
+          </TopButtons>
 
-      <ButtonDoar>
-        <a href = "/donate" className = "Donate">Donate</a>
-      </ButtonDoar>
-
-      <ButtonLogin>
-        <a href = "/login" className = "Login">Login</a>
-      </ButtonLogin>
-
-  </TopButtons>
-
-  <SearchBar placeholder='Pesquisa'/>
-      
-</ButtonGroup>
-
-
-     
- 
-  </NavContainer>
-</nav>
-    )
+          <SearchBar placeholder="Pesquisa" />
+        </ButtonGroup>
+      </NavContainer>
+    </nav>
+  );
 }
 
 function CustomLink({href, children,...props}){ //CustomLink renderiza um link personalizado com funcionalidade de ativação baseada na url atual
