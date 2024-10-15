@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // Estilos usando styled-components
 const CardGrid = styled.div`
@@ -8,6 +9,11 @@ const CardGrid = styled.div`
 
 const SectionTitle = styled.div`
   margin-bottom: 20px;
+  background-color: #1D371B;
+  max-width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 25px;
 
   h2 {
     color: white;
@@ -16,29 +22,26 @@ const SectionTitle = styled.div`
 
 const CardRow = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: #1f422e;
 `;
 
 const Card = styled.div`
-  background-color: #1f422e;
   color: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 30px;
   width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 `;
 
 const CardImage = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   background-color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
 
   img {
     width: 100%;
@@ -48,21 +51,33 @@ const CardImage = styled.div`
 `;
 
 const CardContent = styled.div`
+  height: 150px;
+  width: 250px;
+  
   h3 {
-    margin-bottom: 10px;
+  font-size: 20px;
   }
 `;
 
 const SaibaMaisBtn = styled.button`
   background-color: #00b17d;
   color: white;
+  font-size: 15px;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
 
   &:hover {
     background-color: #009867;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
   }
 `;
 
@@ -91,7 +106,9 @@ function CardGridComponent() {
             <CardContent>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
-              <SaibaMaisBtn>SAIBA MAIS</SaibaMaisBtn>
+          <SaibaMaisBtn>
+             <Link to="/saibamais">Saiba Mais</Link>
+          </SaibaMaisBtn>
             </CardContent>
           </Card>
         ))}
@@ -109,7 +126,9 @@ function CardGridComponent() {
             <CardContent>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
-              <SaibaMaisBtn>SAIBA MAIS</SaibaMaisBtn>
+            <SaibaMaisBtn>
+             <Link to="/saibamais">Saiba Mais</Link>
+            </SaibaMaisBtn>
             </CardContent>
           </Card>
         ))}

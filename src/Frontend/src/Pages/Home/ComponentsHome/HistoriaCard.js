@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // Estilos usando styled-components
 const HistComponentWrapper = styled.div`
@@ -7,18 +8,18 @@ const HistComponentWrapper = styled.div`
   align-items: center;
   background-color: #1f422e;
   padding: 20px;
-  border-radius: 8px;
   color: white;
+  height: 300px;
 `;
 
 const ImageSection = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   background-color: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
+  margin: 50px;
 `;
 
 const HistImage = styled.img`
@@ -27,20 +28,38 @@ const HistImage = styled.img`
   object-fit: cover;
 `;
 
-const TextSection = styled.div`
-  flex: 1;
-`;
+const TitleText = styled.h3`
+font-size: 40px;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+`
+const Text = styled.p`
+font-size: 23px;
+`
 
 const SaibaMaisBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #00b17d;
   color: white;
+  font-size: 20px;
   border: none;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 2px;
+  height: 60px;
+  width: 160px;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 
   &:hover {
     background-color: #009867;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
   }
 `;
 
@@ -51,14 +70,16 @@ function HistComponent() {
       <ImageSection>
         <HistImage src="link-da-imagem" alt="História" />
       </ImageSection>
-      <TextSection>
-        <h3>História "X"</h3>
-        <p>
+      <div>
+        <TitleText>História "X"</TitleText>
+        <Text>
           Pequeno texto da história x texto texto texto texto texto texto
           texto texto texto texto texto texto texto texto texto texto.
-        </p>
-        <SaibaMaisBtn>SAIBA MAIS</SaibaMaisBtn>
-      </TextSection>
+        </Text>
+        <SaibaMaisBtn>
+          <Link to="/saibamais">Saiba Mais</Link>
+        </SaibaMaisBtn>
+      </div>
     </HistComponentWrapper>
   );
 }

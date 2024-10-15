@@ -7,8 +7,7 @@ const ShelterBox = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: #e0f7f4;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 50px;
   margin: 20px 0;
 `;
 
@@ -16,12 +15,12 @@ const TextSection = styled.div`
   max-width: 50%;
 
   h3 {
-    font-size: 24px;
+    font-size: 36px;
     color: #333;
   }
 
   p {
-    font-size: 16px;
+    font-size: 20px;
     color: #666;
     margin-top: 10px;
   }
@@ -32,8 +31,8 @@ const VideoSection = styled.div`
 `;
 
 const VideoPlaceholder = styled.div`
-  width: 100%;
-  height: 200px;
+  width: 800px;
+  height: 450px;
   background-color: #ccc;
   display: flex;
   align-items: center;

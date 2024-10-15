@@ -152,7 +152,7 @@ export default function Header() {
         <ul>
           <GroupNav>
             <ButtonNav>
-              <Link to="/historias">Nosso Trabalho</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/nossotrabalho">Nosso Trabalho</Link> {/* Substitui <a> por <Link> */}
             </ButtonNav>
 
             <ButtonNav>
@@ -164,7 +164,7 @@ export default function Header() {
             </ButtonNav>
 
             <ButtonNav>
-              <Link to="/historias">Tome Ação</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/tome-acao">Tome Ação</Link> {/* Substitui <a> por <Link> */}
             </ButtonNav>
           </GroupNav>
         </ul>
