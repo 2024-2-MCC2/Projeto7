@@ -24,7 +24,7 @@ const ButtonNav = styled.button`
  justify-content: center;
  align-items: center;
  font-size: 1em;
- background-color: #006611;
+ background-color: #1D371B;
   margin: 1em 3em;
   padding: 0.25em 1em;
   border: none;
