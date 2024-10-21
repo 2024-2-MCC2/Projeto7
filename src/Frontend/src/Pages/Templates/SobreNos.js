@@ -45,7 +45,6 @@ const T3 = styled.text`
 const Background2 = styled.div`
   display: flex;
   background-color: #dafff7;
-  border: 2px solid black;
 `
 
 const ButtonBox = styled.div`
@@ -56,41 +55,31 @@ const ButtonBox = styled.div`
 const ImageDisplay2 = styled.image`
  display: flex;
  justify-content: right;
- margin-left: 8%;
   max-width: 30%;
   margin-top: 3%;
   margin-bottom: 3%;
   height: 500px;
 `
 
-const Textos2 = styled.div`
-    display: block;
-     justify-content: center;
-    margin-left: 8%;
-    border: 2px solid black;
-`
-
 const T4 = styled.text `
    color: #1D371B;
-   margin-top: 4%;
-   margin-left: 4%;
+   margin-left: 20%;
    justify-content: center;
+   border: 2px solid black;
 `
 
 const T5 = styled.text `
-display: flex;
-   margin-left: 0%;
-   margin-right: 1%;
-   margin-top: 10%;
+display: block;
+   align-items: center;
    justify-content: center;
+   border: 2px solid black;
 `
 
 const T6 = styled.text`
-display: flex;
-   margin-left: 0%;
-   margin-right: 1%;
-   margin-top: 10%;
+display: block;
+   align-items: center;
    justify-content: center;
+   border: 2px solid black;
 `
 
 const Button1 = styled.button`
@@ -116,17 +105,24 @@ a{
 }
 `
 
+const Titulo = styled.text `
+ display: flex;
+ justify-content: center;
+ margin-bottom: 2%; //so pra dar um espacinho entre as caixas e o título
+`
+
 const Background3 = styled.div `
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  margin-left: 30%;
+  margin-left: 25%; //so pra alinhar as caixas com o titulo
   max-width: 50%;
 `
 
 const Box1 = styled.div`
  text-align: center;
+ justify-content: center;
   background-color: #bdfcd2;
   height: 250px;
   width: 200px;
@@ -140,6 +136,7 @@ return (
 
         <ImageDisplay>
         <img src={Image} alt="Image"/>
+        {/* To pensando em tirar essa img daqui pra colocar dps os slides e tal, soq eu presciso colocar pra direita */}
         </ImageDisplay>
 
 <Textos>
@@ -160,19 +157,22 @@ return (
      <img src={Image2} alt="Em Construção"/>
 </ImageDisplay2>
 
-<Textos2>
 <T4>
    <h1> Seu trabalho ao redor do mundo! </h1>
-</T4>
 
 <T5>
    <p> Texto explicativo </p>
    {/* A ideia depois é colocar um slide de componentes sobre o nosso trabalho, entao de um lado a foto e do outro o texto e os dois podendo fazer slide, tipo um carousel so que com texto junto */}
-</T5>
 <T6>
    <p> texto explicativo 2</p>
 </T6>
-</Textos2>
+
+</T5>
+
+
+</T4>
+
+
 
 <ButtonBox>
 <Button1> 
@@ -182,7 +182,10 @@ return (
 
       </Background2>
 
+<Titulo> <h1> Tipos de ajuda! </h1></Titulo>
+
         <Background3>
+         
            <Box1>
               <h1> Titulo!!! </h1>
               <p> texto </p>
