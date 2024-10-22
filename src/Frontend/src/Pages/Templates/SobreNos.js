@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "../../assets/img/shelter.jpg";
-import Image2 from "../../assets/img/nuhuh.jpg"
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Carousel from "./CarrousselComponents";
+
 
 const Background1 = styled.div`
 padding: 10px;
@@ -42,6 +43,20 @@ const T3 = styled.text`
 
 `
 
+const CarouselBox = styled.div`
+   display: flex;
+   justify-content: right;
+   margin-left: 450px;
+   border: 2px solid black;
+   width: 800px;
+`
+
+const items = [
+   <div style={{ backgroundColor: 'lightblue', height: '400px', width: '800px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Item 1</div>,
+   <div style={{ backgroundColor: 'lightcoral', height: '400px',width: '800px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Item 2</div>,
+   <div style={{ backgroundColor: 'lightgreen', height: '400px',width: '800px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Item 3</div>
+ ];
+
 const Background2 = styled.div`
   display: flex;
   background-color: #dafff7;
@@ -52,34 +67,31 @@ const ButtonBox = styled.div`
   align-items: flex-end;
  `
 
-const ImageDisplay2 = styled.image`
- display: flex;
- justify-content: right;
-  max-width: 30%;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  height: 500px;
+const Textos2 = styled.div`
+  display: flex;
+  justify-content: left;
+  text-align: center;
+  margin-left: 140px;
+  max-width: 50%;
 `
 
 const T4 = styled.text `
    color: #1D371B;
    margin-left: 20%;
+   text-align: center;
    justify-content: center;
-   border: 2px solid black;
 `
 
 const T5 = styled.text `
 display: block;
    align-items: center;
    justify-content: center;
-   border: 2px solid black;
 `
 
 const T6 = styled.text`
 display: block;
    align-items: center;
    justify-content: center;
-   border: 2px solid black;
 `
 
 const Button1 = styled.button`
@@ -136,7 +148,6 @@ return (
 
         <ImageDisplay>
         <img src={Image} alt="Image"/>
-        {/* To pensando em tirar essa img daqui pra colocar dps os slides e tal, soq eu presciso colocar pra direita */}
         </ImageDisplay>
 
 <Textos>
@@ -145,40 +156,37 @@ return (
      </T2>
 
       <T3>
-        <p>  O ShelterBox é uma instituição de caridade que visa ajudar aqueles que sofreram perdas causadas por desastres naturais. A instituição tem como o principal obejtivo ajudar a reconstruir a vida dessas vítimas apartir de doações.
-          Eles acreditam que toda familia merece um lugar para chamar de casa após um desastre e após escutar e aprender sobre o ocorrido, a instituição pega as informações e ajuda de acordo com oque as familias nescessitam. </p>
-      </T3>
+        <p>  O ShelterBox é uma instituição de caridade que visa ajudar aqueles que sofreram perdas causadas por desastres naturais. A instituição tem como o principal obejtivo ajudar a reconstruir a vida dessas vítimas apartir de doações.</p> </T3>
+         <T3> <p> Eles acreditam que toda familia merece um lugar para chamar de casa após um desastre e após escutar e aprender sobre o ocorrido, a instituição pega as informações e ajuda de acordo com oque as familias nescessitam. </p> </T3>
       </Textos>
 
         </Background1>
 
         <Background2>
-<ImageDisplay2>
-     <img src={Image2} alt="Em Construção"/>
-</ImageDisplay2>
 
+
+<Textos2>
 <T4>
    <h1> Seu trabalho ao redor do mundo! </h1>
 
 <T5>
    <p> Texto explicativo </p>
-   {/* A ideia depois é colocar um slide de componentes sobre o nosso trabalho, entao de um lado a foto e do outro o texto e os dois podendo fazer slide, tipo um carousel so que com texto junto */}
 <T6>
    <p> texto explicativo 2</p>
 </T6>
-
 </T5>
-
-
 </T4>
-
-
 
 <ButtonBox>
 <Button1> 
 <Link to = "/ondetrabalhamos"> Saiba Mais! </Link>    
  </Button1>
 </ButtonBox>
+
+</Textos2>
+<CarouselBox>
+<Carousel items={items} />
+</CarouselBox>
 
       </Background2>
 
@@ -205,6 +213,5 @@ return (
 
         </div>
 )
-
 }
 export default SobreNos;
