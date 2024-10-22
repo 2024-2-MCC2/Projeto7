@@ -95,10 +95,9 @@ const DonationComponent = () => {
     },
     motivationalText: {
       position: 'absolute',
-      bottom: '70px',
-      left: '50%',
-      transform: 'translateX(-50%)',
-      fontSize: '20px',
+      bottom: '130px',
+      transform: 'translateX(-0%)',
+      fontSize: '16px',
       textAlign: 'center',
       color: 'white',
       fontWeight: 'bold',
@@ -185,7 +184,8 @@ const DonationComponent = () => {
       <div style={styles.donationContainer}>
         <div style={styles.imageSection}>
           <img src={motivationalImage} alt="Motivação para doar" style={styles.motivationalImage} />
-          <p style={styles.motivationalText}>Doe agora para apoiar as pessoas afetadas por conflitos e desastres ao redor do mundo.</p>
+          <p style={styles.motivationalText}>Doe agora para apoiar as pessoas afetadas por conflitos e 
+            desastres ao redor do mundo.</p>
         </div>
 
         <div style={styles.donationSection}>

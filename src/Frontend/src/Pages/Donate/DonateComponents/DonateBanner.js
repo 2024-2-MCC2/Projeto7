@@ -14,13 +14,18 @@ const Donate = () => {
       margin: '20px auto',
     },
     title: {
-      fontSize: '2em',
+      fontSize: '4em',
       color: '#004c3f',
       margin: 0,
+      left:0,
+    },
+    SubTitle: {
+fontSize:'0,2em',
+color:'#004c3f',
     },
     image: {
-      width: '300px',
-      height: '200px',
+      width: '800px',
+      height: '400px',
       objectFit: 'cover',
       backgroundColor: '#ddd',
       borderRadius: '8px',
@@ -31,6 +36,7 @@ const Donate = () => {
     <div style={styles.container}>
       <div className="donate-text">
         <h2 style={styles.title}>Doe Agora</h2>
+        <h2 style={styles.SubTitle}>Reconstrua casas e transforme vidas</h2>
       </div>
       <div className="donate-image">
         <img src={DonateBannerImagem} alt="Imagem representativa de doação" style={styles.image} />
