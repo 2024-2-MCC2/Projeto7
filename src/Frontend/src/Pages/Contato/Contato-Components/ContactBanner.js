@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ContactImage from '../img/contact-image.jpg'; // Certifique-se de que o caminho está correto
+import ContactImage from '../../../assets/img/contact-image.jpg'; 
 
 const ContactBannerWrapper = styled.div`
   display: flex;
@@ -8,21 +8,21 @@ const ContactBannerWrapper = styled.div`
   justify-content: space-between;
   padding: 40px;
   background-color: #ccffcc;
-  max-width: 1400px;  /* Define uma largura máxima para o banner */
-  margin: 0 auto;     /* Centraliza o banner na página */
+  max-width: 1400px; 
+  margin: 0 auto;     
 `;
 
 const ContactText = styled.div`
   h2 {
     color: #2f4f2f;
-    font-size: 3rem; /* Aumentando o tamanho do texto */
+    font-size: 3rem; 
     margin-right: 20px;
   }
 `;
 
 const Image = styled.div`
-  width: 500px;  /* Aumenta a área da imagem */
-  height: 400px; /* Ajuste o tamanho para ser maior */
+  width: 500px;  
+  height: 400px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,9 +30,9 @@ const Image = styled.div`
   
 
   img {
-    max-width: 150%;  /* A imagem ocupa toda a largura disponível */
-    max-height: 90%; /* Mantém a proporção */
-    object-fit: cover; /* Garante que a imagem preencha a área */
+    max-width: 150%;  
+    max-height: 90%; 
+    object-fit: cover; 
   }
 `;
 

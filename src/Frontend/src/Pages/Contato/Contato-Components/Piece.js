@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const SectionWrapper = styled.div`
   padding: 40px;
@@ -56,9 +57,10 @@ const SocialLinks = styled.div`
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 24px; /* Tamanho do ícone */
 
     &:hover {
-      text-decoration: underline;
+      color: #1d3b1a; /* Cor ao passar o mouse */
     }
   }
 `;
@@ -76,10 +78,18 @@ const Piece = () => {
         Para obter as informações mais recentes sobre o que a ShelterBox está fazendo siga-nos em nossas redes:
       </FollowText>
       <SocialLinks>
-        <a href="https://www.youtube.com/user/shelterboxuk" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://www.facebook.com/ShelterBox/" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://x.com/shelterbox" target="_blank" rel="noopener noreferrer">Twitter</a>
-        <a href="https://www.instagram.com/shelterboxuk/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/user/shelterboxuk" target="_blank" rel="noopener noreferrer">
+          <FaYoutube />
+        </a>
+        <a href="https://www.facebook.com/ShelterBox/" target="_blank" rel="noopener noreferrer">
+          <FaFacebook />
+        </a>
+        <a href="https://x.com/shelterbox" target="_blank" rel="noopener noreferrer">
+          <FaTwitter />
+        </a>
+        <a href="https://www.instagram.com/shelterboxuk/" target="_blank" rel="noopener noreferrer">
+          <FaInstagram />
+        </a>
       </SocialLinks>
     </SectionWrapper>
   );
