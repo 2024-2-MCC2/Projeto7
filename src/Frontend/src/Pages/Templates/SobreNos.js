@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "../../assets/img/shelter.jpg";
+import Image2 from "../../assets/img/impactoglobal.jpeg";
+import Image3 from "../../assets/img/ajuda.jpg";
+import Image4 from "../../assets/img/ajuda2.png";
 import {Link} from 'react-router-dom';
 import Carousel from "./CarrousselComponents";
 
@@ -46,32 +49,30 @@ const T3 = styled.text`
 const CarouselBox = styled.div`
    display: flex;
    justify-content: right;
-   margin-left: 450px;
-   border: 2px solid black;
-   width: 800px;
+   margin-top:20px;
+   margin-left:410px;
+   margin-right:70px;
+   width: 700px;
+   height: 400px;
 `
 
 const items = [
-   <div style={{ backgroundColor: 'lightblue', height: '400px', width: '800px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Item 1</div>,
-   <div style={{ backgroundColor: 'lightcoral', height: '400px',width: '800px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Item 2</div>,
-   <div style={{ backgroundColor: 'lightgreen', height: '400px',width: '800px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Item 3</div>
- ];
+   <div style={{ backgroundColor: 'lightblue', height: '400px', width: '700px', alignItems: 'center', justifyContent: 'center' }}>   <img src={Image2} alt="Image"/></div>,
+   <div style={{ backgroundColor: 'lightcoral', height: '400px',width: '700px', alignItems: 'center', justifyContent: 'center' }}>  <img src={Image3} alt="Image"/></div>,
+   <div style={{ backgroundColor: 'lightgreen', height: '400px',width: '700px',  alignItems: 'center', justifyContent: 'center' }}><img src={Image4} alt="Image"/></div> 
+];
+
 
 const Background2 = styled.div`
-  display: flex;
+  display: flex; 
   background-color: #dafff7;
 `
-
-const ButtonBox = styled.div`
-  display: flex;
-  align-items: flex-end;
- `
 
 const Textos2 = styled.div`
   display: flex;
   justify-content: left;
   text-align: center;
-  margin-left: 140px;
+  margin-left: 1px;
   max-width: 50%;
 `
 
@@ -83,16 +84,20 @@ const T4 = styled.text `
 `
 
 const T5 = styled.text `
-display: block;
+   display: block;
    align-items: center;
    justify-content: center;
 `
 
 const T6 = styled.text`
-display: block;
+   display: block;
    align-items: center;
    justify-content: center;
 `
+const ButtonBox = styled.div`
+  margin-top: 300px;
+  align-items: flex-end;
+ `
 
 const Button1 = styled.button`
 display: flex;
@@ -170,12 +175,13 @@ return (
    <h1> Seu trabalho ao redor do mundo! </h1>
 
 <T5>
-   <p> Texto explicativo </p>
+   <p> O shelterbox tem como o principal objetivo ajudar famílias ao redor de todo o globo, respondendo sempre aonde masi nescessita. Eles fazem tudo que poderem para operar e ajudar com abrigo onde estiver prescisando. </p>
 <T6>
-   <p> texto explicativo 2</p>
+   <p> O critério de decisão se da apartir de diferentes aspectos, como o número de pessoas que prescisam, se a resposrta será aceita, habilidade de operar entre outros, já que eles são uma instituição com recursos limitados.</p>
 </T6>
 </T5>
 </T4>
+</Textos2>
 
 <ButtonBox>
 <Button1> 
@@ -183,7 +189,6 @@ return (
  </Button1>
 </ButtonBox>
 
-</Textos2>
 <CarouselBox>
 <Carousel items={items} />
 </CarouselBox>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // Estilizando o contêiner do carrossel
 const CarouselContainer = styled.div`
-  width: 300px; // Largura do carrossel
+  width: 700px; // Largura do carrossel
   overflow: hidden; // Oculta elementos que estão fora da área visível
   position: relative; // Para posicionar os botões corretamente
 `;
@@ -17,7 +17,8 @@ const CarouselList = styled.div`
 
 // Estilizando cada item do carrossel
 const CarouselItem = styled.div`
-  min-width: 300px; // Largura mínima do item
+  min-width: 700px; // Largura mínima do item
+  display: flex;
 `;
 
 // Estilizando os botões
@@ -28,6 +29,7 @@ const Button = styled.button`
   background: rgba(255, 255, 255, 0.8); // Fundo semi-transparente
   border: none; // Remove bordas
   cursor: pointer; // Muda o cursor para indicar que é clicável
+  height: 100px;
 `;
 
 const LeftButton = styled(Button)`

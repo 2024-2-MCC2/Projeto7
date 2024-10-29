@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import paypalImage from '../../../assets/img/paypal-image.jpg'; 
 import phoneImage from '../../../assets/img/phone-image.jpg'; 
 import jagaimo from '../../../assets/img/himitsu.png'; 
 
 const SupportComponent = () => {
   const [showAlert, setShowAlert] = useState(false);
+  const navigate = useNavigate(); 
 
-  // Função para redirecionar para a página do PayPal
+  
   const handlePayPalClick = () => {
     window.location.href = 'https://www.paypal.com/gb/fundraiser/charity/15601'; 
   };
@@ -16,6 +18,11 @@ const SupportComponent = () => {
     setTimeout(() => {
       setShowAlert(false);
     }, 250); 
+  };
+
+  
+  const handleContactClick = () => {
+    navigate('/contato'); 
   };
 
   const styles = {
@@ -134,7 +141,7 @@ const SupportComponent = () => {
             <img src={phoneImage} alt="Telefone para doação" style={styles.donationImage} />
             <h3 style={styles.donationOptionTitle}>Telefone</h3>
             <p style={styles.donationOptionText}>Entre em contato com nossa equipe de Atendimento ao Apoio pelo telefone 4002 8922 para fazer uma doação com cartão ou contribuir.</p>
-            <button style={styles.donationButton}>Contate-nos</button>
+            <button style={styles.donationButton} onClick={handleContactClick}>Contate-nos</button>
           </div>
         </div>
       </div>
