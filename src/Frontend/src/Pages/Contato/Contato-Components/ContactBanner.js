@@ -8,7 +8,8 @@ const ContactBannerWrapper = styled.div`
   justify-content: space-between;
   padding: 40px;
   background-color: #ccffcc;
-  max-width: 1400px; 
+  max-width: 1900px; 
+  border-radius: 8px;
   margin: 0 auto;     
 `;
 
@@ -31,6 +32,7 @@ const Image = styled.div`
 
   img {
     max-width: 150%;  
+    border-radius:8px;
     max-height: 90%; 
     object-fit: cover; 
   }

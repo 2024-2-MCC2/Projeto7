@@ -4,6 +4,7 @@ import cinquentaImage from '../../../assets/img/50.jpg';
 import centoquarentaImage from '../../../assets/img/140.jpg';
 import quatrocentosImage from '../../../assets/img/400.jpg';
 import motivationalImage from '../../../assets/img/donatepart.jpg'; 
+import styled from 'styled-components';
 
 const DonationComponent = () => {
   const [selectedAmount, setSelectedAmount] = useState(null);
@@ -70,159 +71,149 @@ const DonationComponent = () => {
     }
   };
 
-  const styles = {
-    pageContainer: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '60vh',
-      backgroundColor: '#00cc99',
-    },
-    donationContainer: {
-      display: 'flex',
-      backgroundColor: '#e5f8f3',
-      padding: '0',
-      border: '1px solid #ccc',
-      width: '800px',
-      height: '400px',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      borderRadius: '10px',
-    },
-    imageSection: {
-      flex: 1,
-      position: 'relative',
-      overflow: 'hidden',
-    },
-    motivationalText: {
-      position: 'absolute',
-      bottom: '130px',
-      transform: 'translateX(-0%)',
-      fontSize: '16px',
-      textAlign: 'center',
-      color: 'white',
-      fontWeight: 'bold',
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
-      padding: '10px',
-      borderRadius: '5px',
-    },
-    motivationalImage: {
-      position: 'absolute',
-      left: '0',
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-    },
-    donationSection: {
-      flex: 2,
-      backgroundColor: 'white',
-      padding: '20px',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-    },
-    donationButtons: {
-      display: 'flex',
-      gap: '10px',
-      marginBottom: '20px',
-    },
-    button: {
-      padding: '10px 20px',
-      border: '1px solid #ccc',
-      borderRadius: '5px',
-      cursor: 'pointer',
-      fontSize: '16px',
-      backgroundColor: 'white',
-    },
-    selected: {
-      backgroundColor: '#00cc99',
-      color: 'white',
-    },
-    customInput: {
-      padding: '10px',
-      border: '1px solid #ccc',
-      borderRadius: '5px',
-      cursor: 'pointer',
-      width: '150px',
-    },
-    itemsInfo: {
-      textAlign: 'center',
-      marginBottom: '20px',
-    },
-    itemsImage: {
-      width: '200px',
-      height: '120px',
-      objectFit: 'cover',
-      marginBottom: '10px',
-    },
-    itemsText: {
-      fontSize: '14px',
-      color: '#333',
-    },
-    donateButton: {
-      backgroundColor: '#00cc99',
-      color: 'white',
-      padding: '15px 40px',
-      border: 'none',
-      borderRadius: '5px',
-      fontSize: '18px',
-      cursor: 'pointer',
-      width: '500px',
-    },
-    donateButtonHover: {
-      backgroundColor: '#009977',
-    },
-    helpText: {
-      marginTop: '10px',
-      fontSize: '14px',
-      color: '#666',
-    },
-  };
-
   return (
-    <div style={styles.pageContainer}> 
-      <div style={styles.donationContainer}>
-        <div style={styles.imageSection}>
-          <img src={motivationalImage} alt="Motivação para doar" style={styles.motivationalImage} />
-          <p style={styles.motivationalText}>Doe agora para apoiar as pessoas afetadas por conflitos e 
-            desastres ao redor do mundo.</p>
-        </div>
+    <PageContainer>
+      <DonationContainer>
+        <ImageSection>
+          <img src={motivationalImage} alt="Motivação para doar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <MotivationalText>Doe agora para apoiar as pessoas afetadas por conflitos e desastres ao redor do mundo.</MotivationalText>
+        </ImageSection>
 
-        <div style={styles.donationSection}>
-          <div style={styles.donationButtons}>
+        <DonationSection>
+          <DonationButtons>
             {[20, 50, 140, 400].map((amount) => (
-              <button
+              <AmountButton
                 key={amount}
                 onClick={() => handleAmountClick(amount)}
-                style={{ 
-                  ...styles.button,
-                  ...(selectedAmount === amount ? styles.selected : {}),
-                }}
+                isSelected={selectedAmount === amount}
               >
                 ${amount}
-              </button>
+              </AmountButton>
             ))}
-            <input 
+            <CustomAmountInput 
               type="number" 
               placeholder="Escolha um valor" 
               value={customAmount} 
               onChange={handleCustomAmountChange} 
-              style={styles.customInput}
               min="0" 
             />
-          </div>
+          </DonationButtons>
 
-          <div style={styles.itemsInfo}>
-            <img src={currentImage} alt="Itens doados" style={styles.itemsImage} />
-            <p style={styles.itemsText}>{donationText}</p> 
-          </div>
+          <ItemsInfo>
+            <img src={currentImage} alt="Itens doados" style={{ width: '200px', height: '120px', objectFit: 'cover', marginBottom: '10px' }} />
+            <p>{donationText}</p>
+          </ItemsInfo>
 
-          <button style={styles.donateButton} onClick={handleDonate}>Doar &gt;</button>
-          <p style={styles.helpText}>Precisa de ajuda com a doação? Ligue  +44 300 0300 500</p>
-        </div>
-      </div>
-    </div>
+          <DonateButton onClick={handleDonate}>Doar &gt;</DonateButton>
+          <HelpText>Precisa de ajuda com a doação? Ligue  +44 300 0300 500</HelpText>
+        </DonationSection>
+      </DonationContainer>
+    </PageContainer>
   );
 };
+
+// Styled Components
+
+const PageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: #00cc99;
+`;
+
+const DonationContainer = styled.div`
+  display: flex;
+  background-color: #e5f8f3;
+  padding: 0;
+  border: 1px solid #ccc;
+  width: 900px;
+  height: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+`;
+
+const ImageSection = styled.div`
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+`;
+
+const MotivationalText = styled.p`
+  position: absolute;
+  bottom: 130px;
+  transform: translateX(-0%);
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+`;
+
+const DonationSection = styled.div`
+  flex: 2;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const DonationButtons = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+`;
+
+const AmountButton = styled.button`
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: white;
+  ${({ isSelected }) => isSelected && `
+    background-color: #00cc99;
+    color: white;
+  `}
+`;
+
+const CustomAmountInput = styled.input`
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+`;
+
+const ItemsInfo = styled.div`
+  text-align: center;
+  margin-bottom: 20px;
+`;
+
+const DonateButton = styled.button`
+  background-color: #00cc99;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 500px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #009977;
+  }
+`;
+
+const HelpText = styled.p`
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+`;
 
 export default DonationComponent;
