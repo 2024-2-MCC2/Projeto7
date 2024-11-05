@@ -10,6 +10,7 @@ import OndeTrabalhamos from './Pages/OndeTrabalhamos/OndeTrabalhamos.jsx';
 import NossoTrabalho from './Pages/Templates/NossoTrabalho.jsx'
 import TomeAcao from './Pages/Templates/TomeAcao.jsx'
 import SaibaMais from './Pages/Templates/SaibaMais.jsx'
+import AmericaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AmericaContrs.jsx';
 import Footer from './ComponentsGerais/Footer.js';
 
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/ondetrabalhamos" element={<OndeTrabalhamos/>}/>
       <Route path="/saibamais" element={<SaibaMais/>}/>
       <Route path="/donate" element={<Donate/>}/>
+      <Route path="/americacontrs" element={<AmericaContrs/>}/>
       {/* <Route path="/tomeacao" element={<TomeAcao/>}/>
       <Route path="/nosso" element={<NossoTrab/>}/> */}
     </Routes>

@@ -13,6 +13,7 @@ const GeneralContainer = styled.div`
 
 const ContinentsContainer = styled.div`
     position: relative;
+    padding: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -21,15 +22,15 @@ const ContinentsContainer = styled.div`
 const BtnContainer = styled.div`
 position: absolute;
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content: space-between;
 text-align: center;
+/* border: 2px solid white; */
 gap: 570px;
 `
 
 const America = styled.img`
     margin: 30px;
-    width: 30%; 
+    width: 85%; 
     height: 400px; 
     color: white; 
     display: flex;
@@ -44,7 +45,7 @@ const America = styled.img`
     }
 `;
 
-const Africa = styled(America)``; 
+const Africa = styled(America)``;
 const Asia = styled(America)``;
 
 const AmericaBtn = styled.button`
@@ -55,22 +56,60 @@ const AmericaBtn = styled.button`
     font-weight: bold;
     background-color: transparent;
     border: none;
+
+    &:hover{
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        color: #6acf61;
+    }
+
+    a{
+  color: #FFF;
+  text-decoration: none;
+}
 `
-const AfricaBtn = styled(AmericaBtn)``; 
+const AfricaBtn = styled(AmericaBtn)``;
 const AsiaBtn = styled(AmericaBtn)``;
+
+const AmericaContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+const AfricaContainer = styled(AmericaContainer)``;
+const AsiaContainer = styled(AmericaContainer)``;
+
+
 
 function Map() {
     return (
         <GeneralContainer>
             <ContinentsContainer>
-                <America src={fotocaribe} alt='foto caribe'/>
-                <Africa src={fotosomalia} alt='foto somalia'/>
-                <Asia src={fotopaquistao} alt='foto paquistão'/>
-            <BtnContainer>
-                <AmericaBtn>America</AmericaBtn>
-                <AfricaBtn>Africa</AfricaBtn>
-                <AsiaBtn>Asia</AsiaBtn>
-            </BtnContainer>
+                <AmericaContainer>
+                    <America src={fotocaribe} alt='foto caribe' />
+                    <BtnContainer>
+                        <AmericaBtn>
+                            <Link to='americacontrs'>América</Link>
+                        </AmericaBtn>
+                    </BtnContainer>
+                </AmericaContainer>
+                <AfricaContainer>
+                    <Africa src={fotosomalia} alt='foto somalia' />
+                    <BtnContainer>
+                        <AfricaBtn>
+                            <Link>África</Link>
+                        </AfricaBtn>
+                    </BtnContainer>
+                </AfricaContainer>
+                <AsiaContainer>
+                    <Asia src={fotopaquistao} alt='foto paquistão' />
+                    <BtnContainer>
+                        <AsiaBtn>
+                            <Link>Asia</Link>
+                        </AsiaBtn>
+                    </BtnContainer>
+                </AsiaContainer>
             </ContinentsContainer>
         </GeneralContainer>
     );

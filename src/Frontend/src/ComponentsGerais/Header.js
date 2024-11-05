@@ -152,19 +152,19 @@ export default function Header() {
         <ul>
           <GroupNav>
             <ButtonNav>
-              <Link to="/nossotrabalho">Nosso Trabalho</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/nossotrabalho">Nosso Trabalho</Link> 
             </ButtonNav>
 
             <ButtonNav>
-              <Link to="/historias">Histórias</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/historias">Histórias</Link> 
             </ButtonNav>
 
             <ButtonNav>
-              <Link to="/sobre-nos">Sobre Nós</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/sobre-nos">Sobre Nós</Link> 
             </ButtonNav>
 
             <ButtonNav>
-              <Link to="/tome-acao">Tome Ação</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/tome-acao">Tome Ação</Link> 
             </ButtonNav>
           </GroupNav>
         </ul>
@@ -172,15 +172,15 @@ export default function Header() {
         <ButtonGroup>
           <TopButtons>
             <ButtonCadastro>
-              <Link to="/cadastro">Cadastro</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/cadastro">Cadastro</Link> 
             </ButtonCadastro>
 
             <ButtonDoar>
-              <Link to="/donate">Donate</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/donate">Donate</Link> 
             </ButtonDoar>
 
             <ButtonLogin>
-              <Link to="/login">Login</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/login">Login</Link> 
             </ButtonLogin>
           </TopButtons>
 
