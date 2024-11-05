@@ -23,13 +23,13 @@ const ButtonNav = styled.button`
  display: flex; 
  justify-content: center;
  align-items: center;
- font-size: 1em;
+ font-weight: bold;
  background-color: #006611;
-  margin: 1em 3em;
+  margin: 1em 2em;
   padding: 0.25em 1em;
   border: none;
   color: #fff;
-  width: 175px;
+  width: 220px;
   transition: 0.3s ease-in-out;
 
 &:hover {
@@ -39,7 +39,6 @@ const ButtonNav = styled.button`
 
 a{
   font-size: 25px;
-  font-family: 'Arial Narrow', Arial, sans-serif;
   color: #fff;
   text-decoration: none;
 }
@@ -59,9 +58,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px;
-width: 150px;
-height: 55px;
-font-size: 23px;
+width: 175px;
+height: 70px;
+font-size: 25px;
 font-weight: bold;
 background-color: #15AC86;
 border-radius: 2px;
@@ -83,9 +82,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px;
-width: 150px;
-height: 55px;
-font-size: 23px;
+width: 175px;
+height: 70px;
+font-size: 25px;
 font-weight: bold;
 background-color: #DAFFF6;
 border-radius: 2px;
@@ -107,9 +106,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px;
-width: 150px;
-height: 55px;
-font-size: 23px;
+width: 175px;
+height: 70px;
+font-size: 25px;
 font-weight: bold;
 background-color: #E73131;
 border-radius: 2px;
@@ -126,16 +125,16 @@ a{
 }
 `
 
-const SearchBar = styled.input`
-margin-top: 15px;
-margin-right: 10px;
-width: 75%;
-height: 30px;
-border: 2px solid black;
-outline: none;
-border-radius: 2px;
-background-color: #D9D9D9;
-`
+// const SearchBar = styled.input`
+// margin-top: 15px;
+// margin-right: 10px;
+// width: 75%;
+// height: 30px;
+// border: 2px solid black;
+// outline: none;
+// border-radius: 2px;
+// background-color: #D9D9D9;
+// `
 
 
 
@@ -183,8 +182,6 @@ export default function Header() {
               <Link to="/login">Login</Link> 
             </ButtonLogin>
           </TopButtons>
-
-          <SearchBar placeholder="Pesquisa" />
         </ButtonGroup>
       </NavContainer>
     </nav>

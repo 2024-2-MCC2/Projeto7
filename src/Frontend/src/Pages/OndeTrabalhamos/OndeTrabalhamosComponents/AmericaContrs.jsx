@@ -32,7 +32,7 @@ const TextCaribe = styled.p`
 function AmericaContrs(){
     return(
         <ContainerSumario>
-            <TxtSumario></TxtSumario>
+            <TxtSumario>gay</TxtSumario>
         </ContainerSumario>
     )
 }
