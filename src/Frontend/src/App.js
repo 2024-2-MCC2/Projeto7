@@ -10,6 +10,7 @@ import OndeTrabalhamos from './Pages/OndeTrabalhamos/OndeTrabalhamos.jsx';
 import NossoTrabalho from './Pages/Templates/NossoTrabalho.jsx'
 import TomeAcao from './Pages/Templates/TomeAcao.jsx'
 import SaibaMais from './Pages/Templates/SaibaMais.jsx'
+import AmericaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AmericaContrs.jsx';
 import Footer from './ComponentsGerais/Footer.js';
 import Contato from './Pages/Contato/Contato.js';
 

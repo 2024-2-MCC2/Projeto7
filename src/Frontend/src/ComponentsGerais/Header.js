@@ -29,7 +29,7 @@ const ButtonNav = styled.button`
   padding: 0.25em 1em;
   border: none;
   color: #fff;
-  width: 175px;
+  width: 220px;
   transition: 0.3s ease-in-out;
 
 &:hover {
@@ -39,7 +39,6 @@ const ButtonNav = styled.button`
 
 a{
   font-size: 25px;
-  font-family: 'Arial Narrow', Arial, sans-serif;
   color: #fff;
   text-decoration: none;
 }
@@ -59,9 +58,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px;
-width: 150px;
-height: 55px;
-font-size: 23px;
+width: 175px;
+height: 70px;
+font-size: 25px;
 font-weight: bold;
 background-color: #15AC86;
 border-radius: 2px;
@@ -83,9 +82,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px;
-width: 150px;
-height: 55px;
-font-size: 23px;
+width: 175px;
+height: 70px;
+font-size: 25px;
 font-weight: bold;
 background-color: #DAFFF6;
 border-radius: 2px;
@@ -107,9 +106,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px;
-width: 150px;
-height: 55px;
-font-size: 23px;
+width: 175px;
+height: 70px;
+font-size: 25px;
 font-weight: bold;
 background-color: #E73131;
 border-radius: 2px;
@@ -126,16 +125,16 @@ a{
 }
 `
 
-const SearchBar = styled.input`
-margin-top: 15px;
-margin-right: 10px;
-width: 75%;
-height: 30px;
-border: 2px solid black;
-outline: none;
-border-radius: 2px;
-background-color: #D9D9D9;
-`
+// const SearchBar = styled.input`
+// margin-top: 15px;
+// margin-right: 10px;
+// width: 75%;
+// height: 30px;
+// border: 2px solid black;
+// outline: none;
+// border-radius: 2px;
+// background-color: #D9D9D9;
+// `
 
 
 
@@ -152,19 +151,19 @@ export default function Header() {
         <ul>
           <GroupNav>
             <ButtonNav>
-              <Link to="/nossotrabalho">Nosso Trabalho</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/nossotrabalho">Nosso Trabalho</Link> 
             </ButtonNav>
 
             <ButtonNav>
-              <Link to="/historias">Histórias</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/historias">Histórias</Link> 
             </ButtonNav>
 
             <ButtonNav>
-              <Link to="/sobre-nos">Sobre Nós</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/sobre-nos">Sobre Nós</Link> 
             </ButtonNav>
 
             <ButtonNav>
-              <Link to="/tome-acao">Tome Ação</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/tome-acao">Tome Ação</Link> 
             </ButtonNav>
           </GroupNav>
         </ul>
@@ -172,19 +171,17 @@ export default function Header() {
         <ButtonGroup>
           <TopButtons>
             <ButtonCadastro>
-              <Link to="/cadastro">Cadastro</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/cadastro">Cadastro</Link> 
             </ButtonCadastro>
 
             <ButtonDoar>
-              <Link to="/donate">Donate</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/donate">Donate</Link> 
             </ButtonDoar>
 
             <ButtonLogin>
-              <Link to="/login">Login</Link> {/* Substitui <a> por <Link> */}
+              <Link to="/login">Login</Link> 
             </ButtonLogin>
           </TopButtons>
-
-          <SearchBar placeholder="Pesquisa" />
         </ButtonGroup>
       </NavContainer>
     </nav>
