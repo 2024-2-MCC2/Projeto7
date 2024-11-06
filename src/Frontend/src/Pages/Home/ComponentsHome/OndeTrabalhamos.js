@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import GazaImage from '../../../assets/img/gaza.jpg'
+import BangladeshImage from '../../../assets/img/Bangladesh.jpg'
+import SyriaImage from '../../../assets/img/Syria.jpg'
 
 // Estilos usando styled-components
 const Container = styled.div`
@@ -8,7 +11,7 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 50px;
   background-color: #DFF6F0;
-  height: 300px;
+  height: 400px;  // Aumentando a altura do contêiner
 `;
 
 const LeftSection = styled.div`
@@ -79,7 +82,7 @@ const BtnTrabalhamos = styled.button`
     background-color: #16a085;
   }
 
-  a{
+  a {
     color: white;
     text-decoration: none;
   }
@@ -88,7 +91,7 @@ const BtnTrabalhamos = styled.button`
 const RightSection = styled.div`
   max-width: 50%;
   width: 100%;
-  height: 300px;
+  height: 400px;  // Aumentando a altura da seção direita para acomodar os círculos maiores
   background-color: #1ABC9C;
   padding: 20px;
   border-radius: 15px;
@@ -108,18 +111,37 @@ const Images = styled.div`
 `;
 
 const ImageCircle = styled.div`
-  width: 180px;
-  height: 180px;
+  width: 250px;  // Aumentando a largura do círculo
+  height: 250px;  // Aumentando a altura do círculo
   background-color: #D0D0D0;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.2s ease-in-out;
+  position: relative;  // Para o texto ser posicionado sobre a imagem
+  overflow: hidden;  // Para garantir que a imagem e o texto fiquem dentro do círculo
 
-  &:hover{
-    height: 190px;
-    width: 190px;
+  &:hover {
+    height: 260px;  // Aumentando o tamanho do círculo ao passar o mouse
+    width: 260px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text {
+    position: absolute;  // Coloca o texto sobre a imagem
+    bottom: 10px;  // Coloca o texto mais próximo da parte inferior
+    left: 50%;
+    transform: translateX(-50%);  // Centraliza o texto horizontalmente
+    color: white;  // Cor do texto contrastante
+    font-size: 20px;  // Aumentando o tamanho da fonte
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  // Adiciona sombra para melhorar a legibilidade
+    text-align: center;  // Garante que o texto fique centralizado
   }
 `;
 
@@ -134,20 +156,29 @@ const OndeTrabalhamos = () => {
         <Buttons>
           <BtnDoar>
             <Link to='/donate'>DOAR</Link>
-            </BtnDoar>
+          </BtnDoar>
           <BtnTrabalhamos>
             <Link to='/ondetrabalhamos'>Onde trabalhamos</Link>
           </BtnTrabalhamos>
         </Buttons>
       </LeftSection>
 
-      {/* Seção Direita */}
+      
       <RightSection>
         <RightTitle>Conheça mais sobre esses lugares</RightTitle>
         <Images>
-          <ImageCircle />
-          <ImageCircle />
-          <ImageCircle />
+          <ImageCircle>
+            <img src={GazaImage} alt="Gaza" />
+            <div className="text">Conflito em Gaza</div>
+          </ImageCircle>
+          <ImageCircle>
+            <img src={BangladeshImage} alt="Bangladesh" />
+            <div className="text">Inundação em Bangladesh</div>
+          </ImageCircle>
+          <ImageCircle>
+            <img src={SyriaImage} alt="Conflito na Siria" />
+            <div className="text">Conflito na Siria</div>
+          </ImageCircle>
         </Images>
       </RightSection>
     </Container>
