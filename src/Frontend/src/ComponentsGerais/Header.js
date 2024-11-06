@@ -23,9 +23,9 @@ const ButtonNav = styled.button`
  display: flex; 
  justify-content: center;
  align-items: center;
- font-weight: bold;
- background-color: #006611;
-  margin: 1em 2em;
+ font-size: 1em;
+ background-color: #1D371B;
+  margin: 1em 3em;
   padding: 0.25em 1em;
   border: none;
   color: #fff;

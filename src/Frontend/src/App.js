@@ -12,6 +12,7 @@ import TomeAcao from './Pages/Templates/TomeAcao.jsx'
 import SaibaMais from './Pages/Templates/SaibaMais.jsx'
 import AmericaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AmericaContrs.jsx';
 import Footer from './ComponentsGerais/Footer.js';
+import Contato from './Pages/Contato/Contato.js';
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
       <Route path="/ondetrabalhamos" element={<OndeTrabalhamos/>}/>
       <Route path="/saibamais" element={<SaibaMais/>}/>
       <Route path="/donate" element={<Donate/>}/>
-      <Route path="/americacontrs" element={<AmericaContrs/>}/>
+      <Route path="/contato" element={<Contato/>}/>
       {/* <Route path="/tomeacao" element={<TomeAcao/>}/>
       <Route path="/nosso" element={<NossoTrab/>}/> */}
     </Routes>
