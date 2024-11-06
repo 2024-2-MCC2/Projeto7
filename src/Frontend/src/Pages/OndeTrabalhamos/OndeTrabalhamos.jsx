@@ -4,12 +4,12 @@ import FirstContainer from "./OndeTrabalhamosComponents/FirstContainer";
 import Map from "./OndeTrabalhamosComponents/map.jsx";
 
 
-function OndeTrabalhamosContainer(){
-    return(
-        <>
+function OndeTrabalhamosContainer() {
+    return (
+        <div className="main-content">
             <FirstContainer/>
             <Map/>
-        </>
+        </div>
     )
 }
 export default OndeTrabalhamosContainer

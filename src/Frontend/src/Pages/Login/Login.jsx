@@ -16,10 +16,10 @@ margin-top: 50px;
 
 function MainContainerLogin(){
     return(
-        <>
+        <div className="main-content">
         <StyleTitulo>Login</StyleTitulo>
         <BoxContentLogin/>
-        </>
+        </div>
     )
 }
 export default MainContainerLogin;

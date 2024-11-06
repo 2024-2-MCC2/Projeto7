@@ -33,8 +33,9 @@ const FooterImg = styled.img`
 `;
 
 const Texto = styled.p`
-font-size: 20px;
+font-size: 21px;
 text-align: left;
+font-family: Arial, Helvetica, sans-serif;
 `
 
 const SocialLinks = styled.div`

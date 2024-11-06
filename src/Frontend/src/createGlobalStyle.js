@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .main-content {
-    padding-top: 60px; /* Ajuste para a altura do header fixo */
+    padding-top: 11em; /* Ajuste para a altura do header fixo */
   }
 `;
 

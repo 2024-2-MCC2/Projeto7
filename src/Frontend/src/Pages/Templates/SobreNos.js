@@ -148,7 +148,7 @@ const Box1 = styled.div`
 
 function SobreNos (){
 return (
-    <div>
+   <div className="main-content">
         <Background1>
 
         <ImageDisplay>
