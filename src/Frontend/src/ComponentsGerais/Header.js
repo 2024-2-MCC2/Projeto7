@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Logo from '../assets/img/Logo.png';
 import styled from 'styled-components';
 
@@ -24,8 +24,9 @@ const ButtonNav = styled.button`
  justify-content: center;
  align-items: center;
  font-size: 1em;
+ font-weight: bold;
  background-color: #1D371B;
-  margin: 1em 3em;
+  margin: 1em 2em;
   padding: 0.25em 1em;
   border: none;
   color: #fff;
@@ -33,12 +34,11 @@ const ButtonNav = styled.button`
   transition: 0.3s ease-in-out;
 
 &:hover {
-  background-color: #00a690;
   text-decoration: underline 2px;
 }
 
 a{
-  font-size: 25px;
+  font-size: 24px;
   color: #fff;
   text-decoration: none;
 }
@@ -60,11 +60,12 @@ align-items: center;
 margin: 10px;
 width: 175px;
 height: 70px;
-font-size: 25px;
+font-size: 24px;
 font-weight: bold;
 background-color: #15AC86;
 border-radius: 2px;
 transition: 0.35s ease-in-out;
+border: none;
 
 &:hover{
   background-color: #108265;
@@ -84,11 +85,12 @@ align-items: center;
 margin: 10px;
 width: 175px;
 height: 70px;
-font-size: 25px;
+font-size: 24px;
 font-weight: bold;
 background-color: #DAFFF6;
 border-radius: 2px;
 transition: 0.35s ease-in-out;
+border: none;
 
 &:hover{
   background-color: #88c8b8;
@@ -108,11 +110,12 @@ align-items: center;
 margin: 10px;
 width: 175px;
 height: 70px;
-font-size: 25px;
+font-size: 24px;
 font-weight: bold;
 background-color: #E73131;
 border-radius: 2px;
 transition: 0.35s ease-in-out;
+border: none;
 
 a{
   color: #FFF;
@@ -123,6 +126,17 @@ a{
   background-color: #831f1f;
   cursor: pointer;
 }
+`
+
+const HeaderFixed = styled.div`
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000; 
+background-color: #fff; 
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+height: 60px; /* Altura fixa do header */
 `
 
 // const SearchBar = styled.input`
@@ -142,57 +156,59 @@ a{
 
 export default function Header() {
   return (
-    <nav className="nav">
-      <NavContainer>
-        <Link to="/">
-          <NavImage src={Logo} alt="Logo" className="Logo" />
-        </Link>
-        
-        <ul>
-          <GroupNav>
-            <ButtonNav>
-              <Link to="/nossotrabalho">Nosso Trabalho</Link> 
-            </ButtonNav>
+    <HeaderFixed>
+      <nav className="nav">
+        <NavContainer>
+          <Link to="/">
+            <NavImage src={Logo} alt="Logo" className="Logo" />
+          </Link>
 
-            <ButtonNav>
-              <Link to="/historias">Histórias</Link> 
-            </ButtonNav>
+          <ul>
+            <GroupNav>
+              <ButtonNav>
+                <Link to="/nossotrabalho">Nosso Trabalho</Link>
+              </ButtonNav>
 
-            <ButtonNav>
-              <Link to="/sobre-nos">Sobre Nós</Link> 
-            </ButtonNav>
+              <ButtonNav>
+                <Link to="/historias">Histórias</Link>
+              </ButtonNav>
 
-            <ButtonNav>
-              <Link to="/tome-acao">Tome Ação</Link> 
-            </ButtonNav>
-          </GroupNav>
-        </ul>
+              <ButtonNav>
+                <Link to="/sobre-nos">Sobre Nós</Link>
+              </ButtonNav>
 
-        <ButtonGroup>
-          <TopButtons>
-            <ButtonCadastro>
-              <Link to="/cadastro">Cadastro</Link> 
-            </ButtonCadastro>
+              <ButtonNav>
+                <Link to="/tome-acao">Tome Ação</Link>
+              </ButtonNav>
+            </GroupNav>
+          </ul>
 
-            <ButtonDoar>
-              <Link to="/donate">Donate</Link> 
-            </ButtonDoar>
+          <ButtonGroup>
+            <TopButtons>
+              <ButtonCadastro>
+                <Link to="/cadastro">Cadastro</Link>
+              </ButtonCadastro>
 
-            <ButtonLogin>
-              <Link to="/login">Login</Link> 
-            </ButtonLogin>
-          </TopButtons>
-        </ButtonGroup>
-      </NavContainer>
-    </nav>
+              <ButtonDoar>
+                <Link to="/donate">Donate</Link>
+              </ButtonDoar>
+
+              <ButtonLogin>
+                <Link to="/login">Login</Link>
+              </ButtonLogin>
+            </TopButtons>
+          </ButtonGroup>
+        </NavContainer>
+      </nav>
+    </HeaderFixed>
   );
 }
 
-function CustomLink({href, children,...props}){ //CustomLink renderiza um link personalizado com funcionalidade de ativação baseada na url atual
-    const path = window.location.pathname
+function CustomLink({ href, children, ...props }) { //CustomLink renderiza um link personalizado com funcionalidade de ativação baseada na url atual
+  const path = window.location.pathname
   return (
-    <li className={path===href ? "active" : ""}>
-        <a href= {href} {...props}> {children} </a>
+    <li className={path === href ? "active" : ""}>
+      <a href={href} {...props}> {children} </a>
     </li>
   )
 }
@@ -200,5 +216,5 @@ function CustomLink({href, children,...props}){ //CustomLink renderiza um link p
 //essa passagem esta verificando se o caminho atual é igual ao href e se for adiciona a classe active ao elemento li e renderiza o elemento a com o href passando as propriedades adicionais ("props") e renderiza o conteudo do link dentro do elemento a
 
 //children é o conteúdo do link
-//href é o caminho 
-    //props são propriedades adicionais 
+//href é o caminho
+//props são propriedades adicionais 

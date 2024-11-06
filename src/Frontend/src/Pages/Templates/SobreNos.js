@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Image from "../../assets/img/shelter.jpg";
 import Image2 from "../../assets/img/impactoglobal.jpeg";
-import Image3 from "../../assets/img/ajuda.jpg";
-import Image4 from "../../assets/img/ajuda2.png";
+// import Image3 from "../../assets/img/ajuda.jpg";
+// import Image4 from "../../assets/img/ajuda2.png";
 import {Link} from 'react-router-dom';
 import Carousel from "./CarrousselComponents";
 
@@ -58,8 +58,8 @@ const CarouselBox = styled.div`
 
 const items = [
    <div style={{ backgroundColor: 'lightblue', height: '400px', width: '700px', alignItems: 'center', justifyContent: 'center' }}>   <img src={Image2} alt="Image"/></div>,
-   <div style={{ backgroundColor: 'lightcoral', height: '400px',width: '700px', alignItems: 'center', justifyContent: 'center' }}>  <img src={Image3} alt="Image"/></div>,
-   <div style={{ backgroundColor: 'lightgreen', height: '400px',width: '700px',  alignItems: 'center', justifyContent: 'center' }}><img src={Image4} alt="Image"/></div> 
+   // <div style={{ backgroundColor: 'lightcoral', height: '400px',width: '700px', alignItems: 'center', justifyContent: 'center' }}>  <img src={Image3} alt="Image"/></div>,
+   // <div style={{ backgroundColor: 'lightgreen', height: '400px',width: '700px',  alignItems: 'center', justifyContent: 'center' }}><img src={Image4} alt="Image"/></div> 
 ];
 
 

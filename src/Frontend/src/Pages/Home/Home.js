@@ -8,7 +8,7 @@ import CarouselComponent from './ComponentsHome/CarouselComponent.jsx';
  function Home(){
     return (
 
-        <div>
+        <div className="main-content">
           <CarouselComponent/>
           <HistComponent/>
           <OndeTrabalhamos/>
