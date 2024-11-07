@@ -3,15 +3,17 @@ import styled from 'styled-components';
 
 const ContainerSumario = styled.div`
 background-color: #d1ffce;
-height: 16em;
+border: 2px solid black;
 `
 
 const TxtSumario = styled.p`
+color: white;
+background-color: green;
 
 `
 
 const CaribeContainer = styled.div`
-    
+    background-color: black;
 `
 const ImageCaribeContainer = styled.div`
     
@@ -29,11 +31,14 @@ const TextCaribe = styled.p`
     
 `
 
-function AmericaContrs(){
-    return(
-        <ContainerSumario>
-            <TxtSumario>gay</TxtSumario>
-        </ContainerSumario>
+function AmericaContrs() {
+    return (
+        <>
+            <ContainerSumario>
+                <TxtSumario>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur earum quasi ipsum provident accusantium praesentium iusto veniam sed accusamus. Enim error commodi atque porro numquam? Ducimus recusandae repellat maiores possimus.</TxtSumario>
+            </ContainerSumario>
+            <CaribeContainer/>
+        </>
     )
 }
 
