@@ -11,6 +11,8 @@ import NossoTrabalho from './Pages/Templates/NossoTrabalho.jsx'
 import TomeAcao from './Pages/Templates/TomeAcao.jsx'
 import SaibaMais from './Pages/Templates/SaibaMais.jsx'
 import AmericaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AmericaContrs.jsx';
+import AfricaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AfricaContrs.jsx';
+import AsiaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AsiaContrs.jsx';
 import Footer from './ComponentsGerais/Footer.js';
 import Contato from './Pages/Contato/Contato.js';
 import GlobalStyles from './createGlobalStyle.js';
@@ -33,6 +35,9 @@ function App() {
         <Route path="/saibamais" element={<SaibaMais />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="ondetrabalhamos/america" element={<AmericaContrs />} />
+        <Route path="ondetrabalhamos/africa" element={<AfricaContrs />} />
+        <Route path="ondetrabalhamos/asia" element={<AsiaContrs />} />
         {/* <Route path="/tomeacao" element={<TomeAcao/>}/>
       <Route path="/nosso" element={<NossoTrab/>}/> */}
       </Routes>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 function TomeAcaoContainer(){
     return(
-        <h3>Tome Ação</h3>
+        <h3>gayo</h3>
     )
 }
 export default TomeAcaoContainer

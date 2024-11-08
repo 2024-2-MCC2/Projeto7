@@ -190,7 +190,7 @@ export default function Header() {
               </ButtonCadastro>
 
               <ButtonDoar>
-                <Link to="/donate">Donate</Link>
+                <Link to="/donate">Doação</Link>
               </ButtonDoar>
 
               <ButtonLogin>
