@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import fotocaribe from '../../../assets/img/fotocaribe.png'
+import fotocaribe from '../../../assets/img/fotocaribe1.jpg'
 import fotosomalia from '../../../assets/img/fotosomalia.png'
 import fotopaquistao from '../../../assets/img/fotopaquistao.png'
 import { Link } from 'react-router-dom';
@@ -64,9 +64,9 @@ const AmericaBtn = styled.button`
     }
 
     a{
-  color: #FFF;
-  text-decoration: none;
-}
+        color: #FFF;
+        text-decoration: none;
+    }
 `
 const AfricaBtn = styled(AmericaBtn)``;
 const AsiaBtn = styled(AmericaBtn)``;
@@ -90,7 +90,7 @@ function Map() {
                     <America src={fotocaribe} alt='foto caribe' />
                     <BtnContainer>
                         <AmericaBtn>
-                            <Link to='americacontrs'>América</Link>
+                            <Link to='america'>América</Link>
                         </AmericaBtn>
                     </BtnContainer>
                 </AmericaContainer>
@@ -98,7 +98,7 @@ function Map() {
                     <Africa src={fotosomalia} alt='foto somalia' />
                     <BtnContainer>
                         <AfricaBtn>
-                            <Link>África</Link>
+                            <Link to='africa'>África</Link>
                         </AfricaBtn>
                     </BtnContainer>
                 </AfricaContainer>
@@ -106,7 +106,7 @@ function Map() {
                     <Asia src={fotopaquistao} alt='foto paquistão' />
                     <BtnContainer>
                         <AsiaBtn>
-                            <Link>Asia</Link>
+                            <Link to='asia'>Asia</Link>
                         </AsiaBtn>
                     </BtnContainer>
                 </AsiaContainer>

@@ -5,7 +5,7 @@ import Piece from './Contato-Components/Piece';
 
 function Contato() {
   return (
-    <div className="App">
+    <div className="main-content">
       
       
       <ContactBanner />
