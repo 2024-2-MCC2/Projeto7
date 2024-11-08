@@ -22,7 +22,7 @@ const TituloSumario = styled.h1`
 // Texto do sumário
 const TxtSumario = styled.p`
   color: white;
-  display: flex;
+  display: inline-flex; /* Ajusta o tamanho ao conteúdo */
   justify-content: center;
   align-items: center;
   font-size: 21px;
@@ -30,7 +30,6 @@ const TxtSumario = styled.p`
   font-weight: bold;
   background-color: green;
   max-height: 1em;
-  max-width: 4em;
   padding: 10px;
   border-radius: 2px;
 
@@ -114,23 +113,6 @@ const BoldText = styled.p`
 
 function AmericaContrs() {
 
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const caribbeanImages = [
-      fotocaribe,
-      "link_da_imagem_caribe_2.jpg",
-      "link_da_imagem_caribe_3.jpg"
-    ];
-  
-    useEffect(() => {
-      const timer = setInterval(() => {
-        setCurrentImageIndex((prevIndex) =>
-          prevIndex === caribbeanImages.length - 1 ? 0 : prevIndex + 1
-        );
-      }, 5000);
-  
-      return () => clearInterval(timer);
-    }, [caribbeanImages.length]);
-
   // Função para rolar até a seção
   const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
@@ -146,14 +128,7 @@ function AmericaContrs() {
      {/* Seção do Caribe com carrossel */}
      <SectionContainer id="caribe">
         <ImageContainer>
-          {caribbeanImages.map((image, index) => (
-            <SectionImage
-              key={index}
-              src={image}
-              alt={`Imagem ${index + 1} do Caribe`}
-              style={{ opacity: index === currentImageIndex ? 1 : 0 }}
-            />
-          ))}
+            <SectionImage src={fotocaribe} alt='foto caribe'/>
         </ImageContainer>
         <TextContainer>
         <TipoDeDesastre>Furacão</TipoDeDesastre>

@@ -12,7 +12,7 @@ const FooterContainer = styled.footer`
   background-color: #1d371b;
   color: #fff;
   padding: 40px;
-  margin-top: 10%;
+  /* margin-top: 10%; */
   display: flex;
   justify-content: space-between;
 `;
