@@ -62,7 +62,7 @@ const TxtSumario = styled.p`
   &:hover{
     cursor: pointer;
     /* background-color: #006300; */
-    box-shadow: #000000 -2px 2px 2px;
+    box-shadow: #000000 -2px 2px 3px;
   }
 `;
 

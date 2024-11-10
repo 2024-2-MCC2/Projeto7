@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import fotocaribe from '../../../assets/img/fotocaribe1.jpg'
 import fotosomalia from '../../../assets/img/fotosomalia1.png'
-import fotopaquistao from '../../../assets/img/fotopaquistao.png'
+import fotopaquistao from '../../../assets/img/fotopaquistao3.png'
 import { Link } from 'react-router-dom';
 import ScrollToTop from "../../../ComponentsGerais/ScrollToTop";
 
