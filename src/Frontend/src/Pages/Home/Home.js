@@ -10,8 +10,8 @@ import CarouselComponent from './ComponentsHome/CarouselComponent.jsx';
 
         <div className="main-content">
           <CarouselComponent/>
-          <HistComponent/>
           <OndeTrabalhamos/>
+          <HistComponent/>
           <CardGridComponent/>
           <ShelterBoxComponent/> 
          </div>
