@@ -13,6 +13,21 @@ import fotoburkina1 from '../../../assets/img/fotoburkina1.jpg'
 import fotoburkina2 from '../../../assets/img/fotoburkina2.jpg'
 import fotoburkina3 from '../../../assets/img/fotoburkina3.jpg'
 
+import fotoetiopia1 from '../../../assets/img/fotoetiopia1.jpg'
+import fotoetiopia2 from '../../../assets/img/fotoetiopia2.jpg'
+import fotoetiopia3 from '../../../assets/img/fotoetiopia3.jpg'
+
+import fotochade1 from '../../../assets/img/fotochade1.jpg'
+import fotochade2 from '../../../assets/img/fotochade2.jpg'
+
+import fotosomalia1 from '../../../assets/img/fotosomalia1.png'
+import fotosomalia2 from '../../../assets/img/fotosomalia2.jpg'
+import fotosomalia3 from '../../../assets/img/fotosomalia3.jpg'
+
+import fotomalawi1 from '../../../assets/img/fotomalawi1.jpg'
+import fotomalawi2 from '../../../assets/img/fotomalawi2.jpg'
+import fotomalawi3 from '../../../assets/img/fotomalawi3.jpg'
+
 // Contêiner para o sumário
 const ContainerSumario = styled.div`
   background-color: #d1ffce;
@@ -128,6 +143,7 @@ const BoldText = styled.p`
 function CarrosselDeImagens({ images }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
+    // timer geral para o carrossel
     useEffect(() => {
       const timer = setInterval(() => {
         setCurrentImageIndex((prevIndex) =>
@@ -139,6 +155,7 @@ function CarrosselDeImagens({ images }) {
     }, [images.length]);
   
     return (
+      // carrossel de imagens
       <ImageContainer>
         {images.map((image, index) => (
           <SectionImage
@@ -155,6 +172,7 @@ function CarrosselDeImagens({ images }) {
     );
   }
   
+  // scroll para as seções
   function AfricaContrs() {
     function scrollToSection(id) {
       const section = document.getElementById(id);
@@ -169,7 +187,11 @@ function CarrosselDeImagens({ images }) {
           <TituloSumario>Sumário</TituloSumario>
           <TxtSumario onClick={() => scrollToSection('burkinafaso')}>Burkina Faso</TxtSumario>
           <TxtSumario onClick={() => scrollToSection('camaroes')}>Camarões</TxtSumario>
+          <TxtSumario onClick={() => scrollToSection('chade')}>Chade</TxtSumario>
+          <TxtSumario onClick={() => scrollToSection('etiopia')}>Etiópia</TxtSumario>
+          <TxtSumario onClick={() => scrollToSection('malawi')}>Malawi</TxtSumario>
           <TxtSumario onClick={() => scrollToSection('moçambique')}>Moçambique</TxtSumario>
+          <TxtSumario onClick={() => scrollToSection('somalia')}>Somalia</TxtSumario>
         </ContainerSumario>
 
         {/* //burkina faso */}
@@ -185,7 +207,7 @@ function CarrosselDeImagens({ images }) {
           </TextContainer>
         </SectionContainer>
   
-            {/* //camaroes */}
+        {/* //camaroes */}
         <SectionContainer id="camaroes">
           <TextContainer>
             <TipoDeDesastre>Crise no Lago Bacia de Chade</TipoDeDesastre>
@@ -197,13 +219,65 @@ function CarrosselDeImagens({ images }) {
           </TextContainer>
           <CarrosselDeImagens images={[fotocamaroes1, fotocamaroes2, fotocamaroes3]} />
         </SectionContainer>
+  
+        {/* //chde */}
+        <SectionContainer id="chade">
+          <CarrosselDeImagens images={[fotochade1, fotochade2]} />
+          <TextContainer>
+            <TipoDeDesastre>Conflito</TipoDeDesastre>
+            <Title>Chade</Title>
+            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
+            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
+            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
+            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
+          </TextContainer>
+        </SectionContainer>
+  
+        {/* //etiopia*/}
+        <SectionContainer id="etiopia">
+          <TextContainer>
+            <TipoDeDesastre>Conflito e Seca</TipoDeDesastre>
+            <Title>Etiópia</Title>
+            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
+            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
+            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
+            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
+          </TextContainer>
+          <CarrosselDeImagens images={[fotoetiopia1, fotoetiopia2, fotoetiopia3]} />
+        </SectionContainer>
+  
+        {/* //malawi*/}
+        <SectionContainer id="malawi">
+          <CarrosselDeImagens images={[fotomalawi1, fotomalawi2, fotomalawi3]} />
+          <TextContainer>
+            <TipoDeDesastre>Enchentes</TipoDeDesastre>
+            <Title>Malawi</Title>
+            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
+            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
+            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
+            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
+          </TextContainer>
+        </SectionContainer>
 
-            {/* //maçambique */}
+        {/* //maçambique */}
         <SectionContainer id="moçambique">
-          <CarrosselDeImagens images={[fotomozambique1, fotomozambique2, fotomozambique3]} />
           <TextContainer>
             <TipoDeDesastre>Conflito</TipoDeDesastre>
             <Title>Moçambique</Title>
+            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
+            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
+            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
+            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
+          </TextContainer>
+          <CarrosselDeImagens images={[fotomozambique1, fotomozambique2, fotomozambique3]} />
+        </SectionContainer>
+
+        {/* //somalia */}
+        <SectionContainer id="somalia">
+          <CarrosselDeImagens images={[fotosomalia1, fotosomalia2, fotosomalia3]} />
+          <TextContainer>
+            <TipoDeDesastre>Conflito e Seca</TipoDeDesastre>
+            <Title>Somália</Title>
             <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
             <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
             <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
