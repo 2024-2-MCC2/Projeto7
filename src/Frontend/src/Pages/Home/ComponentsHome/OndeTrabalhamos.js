@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import ScrollToTop from '../../../ComponentsGerais/ScrollToTop'
 
 // Estilos usando styled-components
 const Container = styled.div`
@@ -133,10 +134,10 @@ const OndeTrabalhamos = () => {
         <Text>Pequeno texto sobre onde trabalhamos</Text>
         <Buttons>
           <BtnDoar>
-            <Link to='/donate'>DOAR</Link>
+            <Link onClick={ScrollToTop} to='/donate'>DOAR</Link>
             </BtnDoar>
           <BtnTrabalhamos>
-            <Link to='/ondetrabalhamos'>Onde trabalhamos</Link>
+            <Link onClick={ScrollToTop} to='/ondetrabalhamos'>Onde trabalhamos</Link>
           </BtnTrabalhamos>
         </Buttons>
       </LeftSection>

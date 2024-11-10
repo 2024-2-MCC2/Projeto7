@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 
 // Estilos usando styled-components
 const CardGrid = styled.div`
@@ -107,7 +108,7 @@ function CardGridComponent() {
               <h3>{card.title}</h3>
               <p>{card.text}</p>
           <SaibaMaisBtn>
-             <Link to="/saibamais">Saiba Mais</Link>
+             <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
           </SaibaMaisBtn>
             </CardContent>
           </Card>
@@ -127,7 +128,7 @@ function CardGridComponent() {
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             <SaibaMaisBtn>
-             <Link to="/saibamais">Saiba Mais</Link>
+             <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
             </SaibaMaisBtn>
             </CardContent>
           </Card>

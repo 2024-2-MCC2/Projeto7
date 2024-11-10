@@ -4,6 +4,7 @@ import fotocaribe from '../../../assets/img/fotocaribe1.jpg'
 import fotosomalia from '../../../assets/img/fotosomalia.png'
 import fotopaquistao from '../../../assets/img/fotopaquistao.png'
 import { Link } from 'react-router-dom';
+import ScrollToTop from "../../../ComponentsGerais/ScrollToTop";
 
 
 const GeneralContainer = styled.div`
@@ -90,7 +91,7 @@ function Map() {
                     <America src={fotocaribe} alt='foto caribe' />
                     <BtnContainer>
                         <AmericaBtn>
-                            <Link to='america'>América</Link>
+                            <Link onClick={ScrollToTop} to='america'>América</Link>
                         </AmericaBtn>
                     </BtnContainer>
                 </AmericaContainer>
@@ -98,7 +99,7 @@ function Map() {
                     <Africa src={fotosomalia} alt='foto somalia' />
                     <BtnContainer>
                         <AfricaBtn>
-                            <Link to='africa'>África</Link>
+                            <Link onClick={ScrollToTop} to='africa'>África</Link>
                         </AfricaBtn>
                     </BtnContainer>
                 </AfricaContainer>
@@ -106,7 +107,7 @@ function Map() {
                     <Asia src={fotopaquistao} alt='foto paquistão' />
                     <BtnContainer>
                         <AsiaBtn>
-                            <Link to='asia'>Asia</Link>
+                            <Link onClick={ScrollToTop} to='asia'>Asia</Link>
                         </AsiaBtn>
                     </BtnContainer>
                 </AsiaContainer>

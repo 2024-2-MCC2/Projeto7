@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 
 const SectionWrapper = styled.div`
   padding: 40px;

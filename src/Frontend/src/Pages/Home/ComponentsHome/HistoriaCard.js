@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 
 // Estilos usando styled-components
 const HistComponentWrapper = styled.div`
@@ -77,7 +78,7 @@ function HistComponent() {
           texto texto texto texto texto texto texto texto texto texto.
         </Text>
         <SaibaMaisBtn>
-          <Link to="/saibamais">Saiba Mais</Link>
+          <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
         </SaibaMaisBtn>
       </div>
     </HistComponentWrapper>

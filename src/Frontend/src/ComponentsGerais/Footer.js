@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { AiOutlineX } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 
 const FooterContainer = styled.footer`
   font-family: 'Times New Roman', Times, serif;
@@ -101,9 +102,9 @@ function Footer() {
       </ImgTextContainer>
 
           <LinksContainer>
-            <Link to="/sobre-nos">Sobre Nós</Link>
-            <Link to="/contato">Contato</Link>
-            <Link to="/donate">Doação</Link>
+            <Link onClick={ScrollToTop} to="/sobre-nos">Sobre Nós</Link>
+            <Link onClick={ScrollToTop} to="/contato">Contato</Link>
+            <Link onClick={ScrollToTop} to="/donate">Doação</Link>
           </LinksContainer>
 
       <SocialLinks>

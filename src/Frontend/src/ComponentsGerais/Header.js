@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Logo from '../assets/img/Logo.png';
 import styled from 'styled-components';
+import ScrollToTop from './ScrollToTop';
 
 const NavImage = styled.img`
   margin: 20px 0px;
@@ -159,26 +160,26 @@ export default function Header() {
     <HeaderFixed>
       <nav className="nav">
         <NavContainer>
-          <Link to="/">
+          <Link onClick={ScrollToTop} to="/">
             <NavImage src={Logo} alt="Logo" className="Logo" />
           </Link>
 
           <ul>
             <GroupNav>
               <ButtonNav>
-                <Link to="/nossotrabalho">Nosso Trabalho</Link>
+                <Link onClick={ScrollToTop} to="/nossotrabalho">Nosso Trabalho</Link>
               </ButtonNav>
 
               <ButtonNav>
-                <Link to="/historias">Histórias</Link>
+                <Link onClick={ScrollToTop} to="/historias">Histórias</Link>
               </ButtonNav>
 
               <ButtonNav>
-                <Link to="/sobre-nos">Sobre Nós</Link>
+                <Link onClick={ScrollToTop} to="/sobre-nos">Sobre Nós</Link>
               </ButtonNav>
 
               <ButtonNav>
-                <Link to="/tome-acao">Tome Ação</Link>
+                <Link onClick={ScrollToTop} to="/tome-acao">Tome Ação</Link>
               </ButtonNav>
             </GroupNav>
           </ul>
@@ -186,15 +187,15 @@ export default function Header() {
           <ButtonGroup>
             <TopButtons>
               <ButtonCadastro>
-                <Link to="/cadastro">Cadastro</Link>
+                <Link onClick={ScrollToTop} to="/cadastro">Cadastro</Link>
               </ButtonCadastro>
 
               <ButtonDoar>
-                <Link to="/donate">Doação</Link>
+                <Link onClick={ScrollToTop} to="/donate">Doação</Link>
               </ButtonDoar>
 
               <ButtonLogin>
-                <Link to="/login">Login</Link>
+                <Link onClick={ScrollToTop} to="/login">Login</Link>
               </ButtonLogin>
             </TopButtons>
           </ButtonGroup>

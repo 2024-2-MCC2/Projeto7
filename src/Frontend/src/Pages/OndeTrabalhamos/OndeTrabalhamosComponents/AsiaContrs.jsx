@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
+import ScrollToTop from "../../../ComponentsGerais/ScrollToTop";
 
 import fotocaribe from '../../../assets/img/fotocaribe1.jpg'
 

@@ -42,11 +42,11 @@ const TxtSumario = styled.p`
   background-color: green;
   padding: 10px;
   border-radius: 2px;
+  transition: all 0.2s ease-in-out;
 
   &:hover{
     cursor: pointer;
     /* background-color: #006300; */
-    transition: all 0.2s ease-in-out;
     box-shadow: #000000 -2px 2px 2px;
   }
 `;

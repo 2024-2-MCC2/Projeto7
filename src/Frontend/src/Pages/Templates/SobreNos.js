@@ -6,6 +6,7 @@ import Image2 from "../../assets/img/impactoglobal.jpeg";
 // import Image4 from "../../assets/img/ajuda2.png";
 import {Link} from 'react-router-dom';
 import Carousel from "./CarrousselComponents";
+import ScrollToTop from "../../ComponentsGerais/ScrollToTop";
 
 
 const Background1 = styled.div`
@@ -185,7 +186,7 @@ return (
 
 <ButtonBox>
 <Button1> 
-<Link to = "/ondetrabalhamos"> Saiba Mais! </Link>    
+<Link onClick={ScrollToTop} to = "/ondetrabalhamos"> Saiba Mais! </Link>    
  </Button1>
 </ButtonBox>
 
