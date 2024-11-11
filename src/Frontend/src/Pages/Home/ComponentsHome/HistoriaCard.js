@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+
+import camaroonImage from '../../../assets/img/historia de camarão.jpg'
+
 import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 
 // Estilos usando styled-components
@@ -69,13 +72,12 @@ function HistComponent() {
   return (
     <HistComponentWrapper>
       <ImageSection>
-        <HistImage src="link-da-imagem" alt="História" />
+        <HistImage src={camaroonImage} alt="História" />
       </ImageSection>
       <div>
-        <TitleText>História "X"</TitleText>
+        <TitleText>Projeto storytelling nos Camarões</TitleText>
         <Text>
-          Pequeno texto da história x texto texto texto texto texto texto
-          texto texto texto texto texto texto texto texto texto texto.
+          Convidámos pessoas dos Camarões para partilharem as suas experiências e a importância do abrigo para elas. Saiba como co-criamos uma campanha juntos, dando vida às suas histórias.
         </Text>
         <SaibaMaisBtn>
           <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
