@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
 import GazaImage from '../../../assets/img/gaza.jpg'
 import BangladeshImage from '../../../assets/img/Bangladesh.jpg'
 import SyriaImage from '../../../assets/img/Syria.jpg'
+
+import ScrollToTop from '../../../ComponentsGerais/ScrollToTop'
+
 
 // Estilos usando styled-components
 const Container = styled.div`
@@ -155,10 +159,15 @@ const OndeTrabalhamos = () => {
         <Text>Pequeno texto sobre onde trabalhamos</Text>
         <Buttons>
           <BtnDoar>
+
             <Link to='/donate'>DOAR</Link>
           </BtnDoar>
+
+            <Link onClick={ScrollToTop} to='/donate'>DOAR</Link>
+            </BtnDoar>
+
           <BtnTrabalhamos>
-            <Link to='/ondetrabalhamos'>Onde trabalhamos</Link>
+            <Link onClick={ScrollToTop} to='/ondetrabalhamos'>Onde trabalhamos</Link>
           </BtnTrabalhamos>
         </Buttons>
       </LeftSection>

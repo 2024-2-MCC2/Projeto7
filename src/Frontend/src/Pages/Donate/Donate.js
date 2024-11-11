@@ -6,7 +6,7 @@ import SupportComponent from './DonateComponents/SupportComponent'
 
 function Donate() {
   return (
-    <div className="App">
+    <div className="main-content">
       <DonateBanner/> 
       <DonationComponent/> 
       <SupportComponent/>

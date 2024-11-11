@@ -5,7 +5,7 @@ import Piece from './componentes/Piece';
 
 function App() {
   return (
-    <div className="App">
+    <div className="main-content">
       
       
       <ContactBanner />

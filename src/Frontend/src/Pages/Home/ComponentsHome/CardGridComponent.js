@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 
 import image1 from '../../../assets/img/impacthistory.jpg';
 import image2 from '../../../assets/img/ondeTrabalhamos.jpg';
@@ -127,11 +128,17 @@ function CardGridComponent() {
             <CardContent>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
+
               <ButtonWrapper>
                 <SaibaMaisBtn>
                   <Link to="/saibamais">Saiba Mais</Link>
                 </SaibaMaisBtn>
               </ButtonWrapper>
+
+          <SaibaMaisBtn>
+             <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
+          </SaibaMaisBtn>
+
             </CardContent>
           </Card>
         ))}
@@ -149,11 +156,17 @@ function CardGridComponent() {
             <CardContent>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
+
               <ButtonWrapper>
                 <SaibaMaisBtn>
                   <Link to="/saibamais">Saiba Mais</Link>
                 </SaibaMaisBtn>
               </ButtonWrapper>
+
+            <SaibaMaisBtn>
+             <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
+            </SaibaMaisBtn>
+
             </CardContent>
           </Card>
         ))}

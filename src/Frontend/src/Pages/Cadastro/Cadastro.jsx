@@ -14,10 +14,10 @@ margin-top: 50px;
 
 function MainContainerCadastro(){
     return(
-     <>
+     <div className="main-content">
         <StyleTitulo>Cadastro</StyleTitulo>
         <BoxContent/>
-     </>
+     </div>
     )
 }
 export default MainContainerCadastro
