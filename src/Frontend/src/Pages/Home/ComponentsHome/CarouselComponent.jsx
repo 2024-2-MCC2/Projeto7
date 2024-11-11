@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import image1 from '../../../assets/img/disasterCarrossel.jpg';
+import image2 from '../../../assets/img/climateCarrossel.jpg';
+import image3 from '../../../assets/img/floodCarrossel.jpg';
+import image4 from '../../../assets/img/queimadaCarrossel.jpg';
 
 // Estilização do contêiner do carrossel
 const CarouselContainer = styled.div`
@@ -43,11 +47,11 @@ const PrevButton = styled.button`
   cursor: pointer;
   z-index: 1;
 
-&:hover{
-    background-color: black;
-    color: white;
-    box-shadow: 2px 2px 2px green;
-}
+  &:hover{
+      background-color: black;
+      color: white;
+      box-shadow: 2px 2px 2px green;
+  }
 `;
 
 const NextButton = styled.button`
@@ -64,22 +68,17 @@ const NextButton = styled.button`
   cursor: pointer;
   z-index: 1;
 
-&:hover{
-    background-color: black;
-    color: white;
-    box-shadow: 2px 2px 2px green;
-}
+  &:hover{
+      background-color: black;
+      color: white;
+      box-shadow: 2px 2px 2px green;
+  }
 `;
 
 // Componente de Carrossel
 function CarouselComponent() {
   // Lista de imagens
-  const images = [
-      'https://placehold.co/600x400/d1d1d1/000000/png',
-      'https://placehold.co/600x400/c1c1c1/000000/png',
-      'https://placehold.co/600x400/a1a1a1/000000/png',
-      'https://placehold.co/600x400/000000/ffffff/png',
-  ];
+  const images = [image1, image2, image3, image4];
 
   // Estado para controle do índice atual
   const [currentIndex, setCurrentIndex] = useState(0);

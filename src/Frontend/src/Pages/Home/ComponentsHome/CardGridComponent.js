@@ -2,7 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-// Estilos usando styled-components
+import image1 from '../../../assets/img/impacthistory.jpg';
+import image2 from '../../../assets/img/ondeTrabalhamos.jpg';
+import image3 from '../../../assets/img/disatersExplain.jpg';
+import image4 from '../../../assets/img/bookClub.jpg';
+import image5 from '../../../assets/img/gift.jpg';
+import image6 from '../../../assets/img/DreamTeam.jpg';
+
 const CardGrid = styled.div`
   padding: 40px;
 `;
@@ -42,6 +48,8 @@ const CardImage = styled.div`
   width: 250px;
   height: 250px;
   background-color: #ccc;
+  border-radius: 8px; 
+  overflow: hidden; 
 
   img {
     width: 100%;
@@ -51,12 +59,26 @@ const CardImage = styled.div`
 `;
 
 const CardContent = styled.div`
-  height: 150px;
+  height: 200px;
   width: 250px;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
   h3 {
-  font-size: 20px;
+    font-size: 20px;
   }
+
+  p {
+    margin: 0;
+  }
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `;
 
 const SaibaMaisBtn = styled.button`
@@ -74,22 +96,21 @@ const SaibaMaisBtn = styled.button`
     background-color: #009867;
   }
 
-  a{
+  a {
     text-decoration: none;
     color: white;
     font-weight: bold;
   }
 `;
 
-// Componente principal
 function CardGridComponent() {
   const cards = [
-    { title: 'Histórias de impacto', text: 'Textinho sobre' },
-    { title: 'Onde trabalhamos', text: 'Textinho sobre' },
-    { title: 'Desastres explicados', text: 'Textinho sobre' },
-    { title: 'Clube do livro', text: 'Textinho sobre' },
-    { title: 'Deixe um presente', text: 'Textinho sobre' },
-    { title: 'Faça parte do time', text: 'Textinho sobre' },
+    { title: 'Histórias de impacto', text: 'Conheça as pessoas que seu apoio está ajudando e leia suas histórias poderosas.', image: image1 },
+    { title: 'Onde trabalhamos', text: 'Obtenha as atualizações mais recentes para o nosso trabalho e descubra onde estamos apoiando comunidades em todo o mundo após desastres e conflitos.', image: image2 },
+    { title: 'Desastres explicados', text: 'Tudo o que você precisa saber sobre desastres – desde eventos climáticos extremos até conflitos complexos.', image: image3 },
+    { title: 'Clube do livro', text: 'Saiba mais sobre os livros que lemos, o que nossos membros pensam.', image: image4 },
+    { title: 'Deixe um presente', text: 'Traga calma ao caos – deixe um presente em seu testamento e ajude as comunidades a se reconstruírem após o desastre.', image: image5 },
+    { title: 'Faça parte do time', text: 'Faça parte da equipe da ShelterBox e inspire seus clientes, envolva sua equipe e aumente seu desempenho.', image: image6 },
   ];
 
   return (
@@ -101,14 +122,16 @@ function CardGridComponent() {
         {cards.slice(0, 3).map((card, index) => (
           <Card key={index}>
             <CardImage>
-              <img src="link-da-imagem" alt="Ícone" />
+              <img src={card.image} alt={card.title} />
             </CardImage>
             <CardContent>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
-          <SaibaMaisBtn>
-             <Link to="/saibamais">Saiba Mais</Link>
-          </SaibaMaisBtn>
+              <ButtonWrapper>
+                <SaibaMaisBtn>
+                  <Link to="/saibamais">Saiba Mais</Link>
+                </SaibaMaisBtn>
+              </ButtonWrapper>
             </CardContent>
           </Card>
         ))}
@@ -121,14 +144,16 @@ function CardGridComponent() {
         {cards.slice(3).map((card, index) => (
           <Card key={index}>
             <CardImage>
-              <img src="link-da-imagem" alt="Ícone" />
+              <img src={card.image} alt={card.title} />
             </CardImage>
             <CardContent>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
-            <SaibaMaisBtn>
-             <Link to="/saibamais">Saiba Mais</Link>
-            </SaibaMaisBtn>
+              <ButtonWrapper>
+                <SaibaMaisBtn>
+                  <Link to="/saibamais">Saiba Mais</Link>
+                </SaibaMaisBtn>
+              </ButtonWrapper>
             </CardContent>
           </Card>
         ))}
