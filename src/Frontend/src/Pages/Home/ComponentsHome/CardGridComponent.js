@@ -2,17 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
+import HistoriaCard from './HistoriaCard'
 
 // Estilos usando styled-components
 const CardGrid = styled.div`
-  padding: 40px;
+  /* padding: 40px; */
 `;
 
 const SectionTitle = styled.div`
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   background-color: #1D371B;
   max-width: 100%;
-  border-radius: 5px;
   padding: 5px;
   padding-left: 25px;
 
@@ -24,8 +24,7 @@ const SectionTitle = styled.div`
 const CardRow = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
-  border-radius: 8px;
+  /* margin-bottom: 40px; */
   background-color: #1f422e;
 `;
 
@@ -56,14 +55,14 @@ const CardContent = styled.div`
   width: 250px;
   
   h3 {
-  font-size: 20px;
+  font-size: 23px;
   }
 `;
 
 const SaibaMaisBtn = styled.button`
   background-color: #00b17d;
   color: white;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: bold;
   border: none;
   padding: 10px 20px;
@@ -85,11 +84,8 @@ const SaibaMaisBtn = styled.button`
 // Componente principal
 function CardGridComponent() {
   const cards = [
-    { title: 'Histórias de impacto', text: 'Textinho sobre' },
-    { title: 'Onde trabalhamos', text: 'Textinho sobre' },
+    { title: 'Onde trabalhamos', text: 'Textinho sobre', link:'/ondetrabalhamos' },
     { title: 'Desastres explicados', text: 'Textinho sobre' },
-    { title: 'Clube do livro', text: 'Textinho sobre' },
-    { title: 'Deixe um presente', text: 'Textinho sobre' },
     { title: 'Faça parte do time', text: 'Textinho sobre' },
   ];
 
@@ -108,32 +104,14 @@ function CardGridComponent() {
               <h3>{card.title}</h3>
               <p>{card.text}</p>
           <SaibaMaisBtn>
-             <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
+             <Link onClick={ScrollToTop} to={card.link}>Saiba Mais</Link>
           </SaibaMaisBtn>
             </CardContent>
           </Card>
         ))}
       </CardRow>
 
-      <SectionTitle>
-        <h2>Formas de se envolver</h2>
-      </SectionTitle>
-      <CardRow>
-        {cards.slice(3).map((card, index) => (
-          <Card key={index}>
-            <CardImage>
-              <img src="link-da-imagem" alt="Ícone" />
-            </CardImage>
-            <CardContent>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            <SaibaMaisBtn>
-             <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
-            </SaibaMaisBtn>
-            </CardContent>
-          </Card>
-        ))}
-      </CardRow>
+      <HistoriaCard/>
     </CardGrid>
   );
 }

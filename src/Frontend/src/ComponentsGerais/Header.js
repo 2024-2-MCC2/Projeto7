@@ -13,6 +13,7 @@ const NavContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     background-color: #1D371B;
+    height: 150px;
 `
 
 const GroupNav = styled.div` 

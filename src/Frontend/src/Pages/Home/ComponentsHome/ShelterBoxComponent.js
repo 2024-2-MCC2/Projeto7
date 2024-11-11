@@ -8,7 +8,7 @@ const ShelterBox = styled.div`
   justify-content: space-between;
   background-color: #e0f7f4;
   padding: 50px;
-  margin: 20px 0;
+  /* margin: 20px 0; */
 `;
 
 const TextSection = styled.div`

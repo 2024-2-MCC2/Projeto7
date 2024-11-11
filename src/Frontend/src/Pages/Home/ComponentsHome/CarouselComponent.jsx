@@ -45,7 +45,7 @@ const PrevButton = styled.button`
 
 &:hover{
     background-color: black;
-    color: white;
+    color: #ffffff;
     box-shadow: 2px 2px 2px green;
 }
 `;
