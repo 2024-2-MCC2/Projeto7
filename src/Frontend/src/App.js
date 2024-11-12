@@ -7,14 +7,15 @@ import Cadastro from './Pages/Cadastro/Cadastro.jsx';
 import Login from './Pages/Login/Login.jsx';
 import Donate from './Pages/Donate/Donate.js';
 import OndeTrabalhamos from './Pages/OndeTrabalhamos/OndeTrabalhamos.jsx';
-import NossoTrabalho from './Pages/Templates/NossoTrabalho.jsx'
-import TomeAcao from './Pages/Templates/TomeAcao.jsx'
+import NossoTrabalho from './Pages/NossoTrabalho/NossoTrabalho.jsx';
+import TomeAcao from './Pages/TomeAcao/TomeAcao.jsx'
 import SaibaMais from './Pages/Templates/SaibaMais.jsx'
 import AmericaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AmericaContrs.jsx';
 import AfricaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AfricaContrs.jsx';
 import AsiaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AsiaContrs.jsx';
 import Footer from './ComponentsGerais/Footer.js';
 import Contato from './Pages/Contato/Contato.js';
+import DesastresExplicados from './Pages/Templates/DesastresExplicados.jsx'
 import GlobalStyles from './createGlobalStyle.js';
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/nossotrabalho" element={<NossoTrabalho />} />
         <Route path="/tome-acao" element={<TomeAcao />} />
+        <Route path="/desastresexplicados" element={<DesastresExplicados />} />
         <Route path="/ondetrabalhamos" element={<OndeTrabalhamos />} />
         <Route path="/saibamais" element={<SaibaMais />} />
         <Route path="/donate" element={<Donate />} />
