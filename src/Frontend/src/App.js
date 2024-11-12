@@ -8,7 +8,7 @@ import Login from './Pages/Login/Login.jsx';
 import Donate from './Pages/Donate/Donate.js';
 import OndeTrabalhamos from './Pages/OndeTrabalhamos/OndeTrabalhamos.jsx';
 import NossoTrabalho from './Pages/NossoTrabalho/NossoTrabalho.jsx';
-import TomeAcao from './Pages/Templates/TomeAcao.jsx'
+import TomeAcao from './Pages/TomeAcao/TomeAcao.jsx'
 import SaibaMais from './Pages/Templates/SaibaMais.jsx'
 import AmericaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AmericaContrs.jsx';
 import AfricaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AfricaContrs.jsx';
