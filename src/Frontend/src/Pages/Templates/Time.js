@@ -159,7 +159,18 @@ a{
 }
 `;
 
-// Componente principal
+// Novo componente para o texto abaixo da div das pessoas
+const TextoAbaixo = styled.div`
+  margin-top: 40px; /* Espaço entre as pessoas e o texto */
+  padding: 20px;
+  background-color: #f0f8f0; /* Cor de fundo do texto */
+  border-radius: 10px;
+  border: 2px solid #bbb; /* Borda suave */
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+`;
+
 function Time() {
   return (
     <BackgroundGeral>
@@ -225,6 +236,11 @@ function Time() {
             </LinkPessoa3>
           </BoxPessoa>
         </BoxPessoaContainer>
+          {/* Novo espaço para o texto abaixo das pessoas */}
+          <TextoAbaixo>
+          <p>Esse site foi criado pelo nosso time de programadores e desenvolvedores independentes para o trabalho da faculdade, sem nenhum fim lucrativo, com o unico objetivo sendo o de aprendizagem e colocar em prática aquilo aplicado em aula.</p>
+          <p> Após a escolha de uma instituição que caia nos critérios desejados, colocamos em prática nossas aulas para poder criar esse site.</p>
+        </TextoAbaixo>
       </BoxGeral>
     </BackgroundGeral>
   );
