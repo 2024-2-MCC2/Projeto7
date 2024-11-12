@@ -17,7 +17,7 @@ import Footer from './ComponentsGerais/Footer.js';
 import Contato from './Pages/Contato/Contato.js';
 import DesastresExplicados from './Pages/Templates/DesastresExplicados.jsx'
 import GlobalStyles from './createGlobalStyle.js';
-
+import Time from './Pages/Templates/Time.js';
 
 function App() {
   return (
@@ -40,6 +40,7 @@ function App() {
         <Route path="ondetrabalhamos/america" element={<AmericaContrs />} />
         <Route path="ondetrabalhamos/africa" element={<AfricaContrs />} />
         <Route path="ondetrabalhamos/asia" element={<AsiaContrs />} />
+        <Route path='/timedosite' element={<Time/>}/>
         {/* <Route path="/tomeacao" element={<TomeAcao/>}/>
       <Route path="/nosso" element={<NossoTrab/>}/> */}
       </Routes>
