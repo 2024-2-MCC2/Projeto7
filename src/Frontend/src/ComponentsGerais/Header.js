@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import ScrollToTop from './ScrollToTop';
 
 const NavImage = styled.img`
-  margin: 20px 0px;
-  max-width: 220px;
+  padding-left: 20px;
+  max-width: 260px;
 `
 
 const NavContainer = styled.div`
