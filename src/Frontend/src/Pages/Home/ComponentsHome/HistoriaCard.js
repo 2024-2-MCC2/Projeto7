@@ -2,39 +2,47 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import ImpactImage from '../../../assets/img/impacthistory.jpg'
+
+import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
+
 // Estilos usando styled-components
 const HistComponentWrapper = styled.div`
   display: flex;
   align-items: center;
-  background-color: #1f422e;
+  background-color: #ededed;
   padding: 20px;
   color: white;
   height: 300px;
 `;
 
 const ImageSection = styled.div`
-  width: 250px;
-  height: 250px;
+  width: 500px;
+  height: 300px;
   background-color: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 50px;
+ 
 `;
 
 const HistImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius:10px;
 `;
 
 const TitleText = styled.h3`
 font-size: 40px;
 font-weight: bold;
 font-family: Arial, Helvetica, sans-serif;
+color: black;
 `
 const Text = styled.p`
 font-size: 23px;
+color: black;
 `
 
 const SaibaMaisBtn = styled.button`
@@ -43,7 +51,8 @@ const SaibaMaisBtn = styled.button`
   align-items: center;
   background-color: #00b17d;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
   border: none;
   padding: 10px 20px;
   border-radius: 2px;
@@ -68,16 +77,15 @@ function HistComponent() {
   return (
     <HistComponentWrapper>
       <ImageSection>
-        <HistImage src="link-da-imagem" alt="História" />
+        <HistImage src={ImpactImage} alt="História" />
       </ImageSection>
       <div>
-        <TitleText>História "X"</TitleText>
+        <TitleText>Histórias de impacto</TitleText>
         <Text>
-          Pequeno texto da história x texto texto texto texto texto texto
-          texto texto texto texto texto texto texto texto texto texto.
+        Conheça as pessoas que seu apoio está ajudando e leia suas histórias poderosas.
         </Text>
         <SaibaMaisBtn>
-          <Link to="/saibamais">Saiba Mais</Link>
+          <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
         </SaibaMaisBtn>
       </div>
     </HistComponentWrapper>

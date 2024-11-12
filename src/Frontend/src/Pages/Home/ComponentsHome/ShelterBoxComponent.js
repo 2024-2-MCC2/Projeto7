@@ -8,7 +8,7 @@ const ShelterBox = styled.div`
   justify-content: space-between;
   background-color: #e0f7f4;
   padding: 50px;
-  margin: 20px 0;
+  /* margin: 20px 0; */
 `;
 
 const TextSection = styled.div`
@@ -38,10 +38,10 @@ const VideoPlaceholder = styled.div`
   align-items: center;
   justify-content: center;
 
-  img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 `;
 
@@ -51,11 +51,18 @@ function ShelterBoxComponent() {
     <ShelterBox>
       <TextSection>
         <h3>Sobre o ShelterBox</h3>
-        <p>Texto sobre o shelter box</p>
+        <p>Texto sobre o ShelterBox, explicando a importância dessa organização que fornece abrigo e ajuda humanitária em momentos de crise.</p>
       </TextSection>
       <VideoSection>
         <VideoPlaceholder>
-          <img src="link-da-imagem-do-video" alt="Vídeo sobre ShelterBox" />
+          <iframe
+            width="800"
+            height="450"
+            src="https://www.youtube.com/embed/Ukpl_yM1AKA" 
+            title="Vídeo sobre ShelterBox"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </VideoPlaceholder>
       </VideoSection>
     </ShelterBox>

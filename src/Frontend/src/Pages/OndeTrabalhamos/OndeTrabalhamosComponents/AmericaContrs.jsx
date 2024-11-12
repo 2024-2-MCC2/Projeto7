@@ -32,12 +32,12 @@ const TxtSumario = styled.p`
   max-height: 1em;
   padding: 10px;
   border-radius: 2px;
+  transition: all 0.2s ease-in-out;
 
   &:hover{
     cursor: pointer;
     /* background-color: #006300; */
-    transition: all 0.2s ease-in-out;
-    box-shadow: #000000 -2px 2px 2px;
+    box-shadow: #000000 -2px 2px 3px;
   }
 `;
 
@@ -121,7 +121,7 @@ function AmericaContrs() {
   return (
     <div className="main-content">
       <ContainerSumario>
-        <TituloSumario>Sumário</TituloSumario>
+        <TituloSumario>América:</TituloSumario>
         <TxtSumario onClick={() => scrollToSection('caribe')}>Caribe</TxtSumario>
       </ContainerSumario>
       
