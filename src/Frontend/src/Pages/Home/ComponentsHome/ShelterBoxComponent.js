@@ -51,7 +51,13 @@ function ShelterBoxComponent() {
     <ShelterBox>
       <TextSection>
         <h3>Sobre o ShelterBox</h3>
-        <p>Texto sobre o ShelterBox, explicando a importância dessa organização que fornece abrigo e ajuda humanitária em momentos de crise.</p>
+        <p>A ShelterBox existe para garantir que ninguém fique sem abrigo após o desastre. Muitas vezes trabalhamos em lugares que outros não trabalham, certificando-nos de alcançar as famílias que precisam de apoio para dar o próximo passo na retomada de seus meios de subsistência.
+
+Ao fornecer abrigo de emergência e ferramentas para famílias roubadas de suas casas por desastres, estamos transformando o desespero em esperança.
+
+De Camarões à Síria, até as Filipinas e o Caribe, a ShelterBox forneceu abrigo a mais de 2,5 milhões de pessoas até agora.
+
+Não vamos parar até vermos um mundo onde nenhuma família fica sem abrigo após o desastre.</p>
       </TextSection>
       <VideoSection>
         <VideoPlaceholder>
