@@ -8,7 +8,7 @@ import Login from './Pages/Login/Login.jsx';
 import Donate from './Pages/Donate/Donate.js';
 import OndeTrabalhamos from './Pages/OndeTrabalhamos/OndeTrabalhamos.jsx';
 import NossoTrabalho from './Pages/NossoTrabalho/NossoTrabalho.jsx';
-import TomeAcao from './Pages/Templates/TomeAcao.jsx'
+import TomeAcao from './Pages/TomeAcao/TomeAcao.jsx'
 import SaibaMais from './Pages/Templates/SaibaMais.jsx'
 import AmericaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AmericaContrs.jsx';
 import AfricaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AfricaContrs.jsx';
@@ -17,7 +17,7 @@ import Footer from './ComponentsGerais/Footer.js';
 import Contato from './Pages/Contato/Contato.js';
 import DesastresExplicados from './Pages/Templates/DesastresExplicados.jsx'
 import GlobalStyles from './createGlobalStyle.js';
-
+import Time from './Pages/Templates/Time.js';
 
 function App() {
   return (
@@ -40,6 +40,7 @@ function App() {
         <Route path="ondetrabalhamos/america" element={<AmericaContrs />} />
         <Route path="ondetrabalhamos/africa" element={<AfricaContrs />} />
         <Route path="ondetrabalhamos/asia" element={<AsiaContrs />} />
+        <Route path='/timedosite' element={<Time/>}/>
         {/* <Route path="/tomeacao" element={<TomeAcao/>}/>
       <Route path="/nosso" element={<NossoTrab/>}/> */}
       </Routes>

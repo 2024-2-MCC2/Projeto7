@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-    height: 1000px;
+    height: 1200px;
     padding: 50px;
     background-color: white;
 `;
@@ -52,13 +52,19 @@ function VideoSection() {
                 />
             </VideoContainer>
             <TextsContainer>
-                <Texts>Toda família merece um lugar para chamar de lar após um desastre.
-                    Trabalhamos com comunidades afetadas por desastres para fornecer abrigo de emergência, itens essenciais e treinamento necessários para apoiar as famílias no longo processo de reconstrução de suas vidas.
-                    Cada desastre é diferente, então adotamos uma abordagem flexível. Escutamos e aprendemos com as comunidades com as quais trabalhamos para garantir que ofereçamos o suporte adequado.
-                    Frequentemente vamos além, atendendo comunidades de difícil acesso que são negligenciadas por outros.</Texts>
-                <Texts>Antes que um desastre aconteça, garantimos que estamos prontos para ajudar. Armazenamos ajuda em locais estratégicos ao redor do mundo para que possamos entregá-la às famílias que precisam o mais rápido possível.
-                    Trabalhamos com parceiros locais confiáveis e contamos com uma rede de voluntários incríveis que estão prontos para ajudar a qualquer momento.
-                    Nossas equipes podem viajar a pé, de barco, helicóptero ou tuk-tuk para chegar às famílias que precisam do seu apoio – fazemos o que for necessário para alcançar as pessoas que precisam de nós.
+                <Texts><strong>Toda família merece um lugar para chamar de lar após um desastre.</strong> <br />
+                    <br />
+                    Trabalhamos com comunidades afetadas por desastres para fornecer abrigo de emergência, itens essenciais e treinamento necessários para apoiar as famílias no longo processo de reconstrução de suas vidas. <br/>
+                    <br/>
+                    Cada desastre é diferente, então adotamos uma abordagem flexível. Escutamos e aprendemos com as comunidades com as quais trabalhamos para garantir que ofereçamos o suporte adequado.<br/>
+                    <br/>
+                    <strong>Frequentemente vamos além, atendendo comunidades de difícil acesso que são negligenciadas por outros.</strong></Texts>
+                <Texts><strong>Antes que um desastre aconteça, garantimos que estamos prontos para ajudar. Armazenamos ajuda em locais estratégicos ao redor do mundo para que possamos entregá-la às famílias que precisam o mais rápido possível.</strong><br/>
+                <br/>
+                    Trabalhamos com parceiros locais confiáveis e contamos com uma rede de voluntários incríveis que estão prontos para ajudar a qualquer momento.<br/>
+                    <br/>
+                    Nossas equipes podem viajar a pé, de barco, helicóptero ou tuk-tuk para chegar às famílias que precisam do seu apoio – fazemos o que for necessário para alcançar as pessoas que precisam de nós.<br/>
+                    <br/>
                     Saiba mais sobre como tudo isso acontece.</Texts>
             </TextsContainer>
         </Container>

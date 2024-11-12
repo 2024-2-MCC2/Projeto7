@@ -161,14 +161,13 @@ const OndeTrabalhamos = () => {
           <BtnDoar>
             <Link to='/donate'>DOAR</Link>
           </BtnDoar>
-
+            <Link onClick={ScrollToTop} to='/donate'>DOAR</Link>
           <BtnTrabalhamos>
             <Link onClick={ScrollToTop} to='/ondetrabalhamos'>Onde trabalhamos</Link>
           </BtnTrabalhamos>
         </Buttons>
       </LeftSection>
 
-      {/* Seção Direita */}
       <RightSection>
         <RightTitle>Conheça mais sobre esses lugares</RightTitle>
         <Images>

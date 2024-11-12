@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import OurWorkSection from "./ComponentsNossoTrabalho/OurWorkSection";
 import VideoSection from "./ComponentsNossoTrabalho/VideoSection";
 import GridSection from "./ComponentsNossoTrabalho/GridSection";
-import WhyShelter from "./ComponentsNossoTrabalho/WhyShelter.jsx";
+import WhyShelter from "./ComponentsNossoTrabalho/WhyShelter";
 
-function NossoTrabalho (){
-return(
-<div className="main-content">
-  <OurWorkSection/>
-  <VideoSection/>
-  <GridSection/>
-  <WhyShelter/>
-</div>
-)
+function NossoTrabalho() {
+  return (
+    <div className="main-content">
+      <OurWorkSection />
+      <VideoSection />
+      <GridSection />
+      <WhyShelter />
+    </div>
+  )
 }
 export default NossoTrabalho
