@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
-import HistoriaCard from './HistoriaCard'
+import HistoriaCard from './HistoriaCard';
 
 import image1 from '../../../assets/img/impacthistory.jpg';
 import image2 from '../../../assets/img/ondeTrabalhamos.jpg';
@@ -16,7 +16,6 @@ const CardGrid = styled.div`
 `;
 
 const SectionTitle = styled.div`
-  /* margin-bottom: 20px; */
   background-color: #1D371B;
   max-width: 100%;
   padding: 5px;
@@ -30,22 +29,22 @@ const SectionTitle = styled.div`
 const CardRow = styled.div`
   display: flex;
   justify-content: center;
-  /* margin-bottom: 40px; */
   background-color: #1f422e;
 `;
 
 const Card = styled.div`
   color: white;
-  padding: 30px;
+  padding: 20px;
   width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
 `;
 
 const CardImage = styled.div`
-  width: 250px;
+  width: 500px;
   height: 250px;
   background-color: #ccc;
   border-radius: 8px; 
@@ -60,14 +59,20 @@ const CardImage = styled.div`
 
 const CardContent = styled.div`
   height: 200px;
-  width: 250px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
   h3 {
-  font-size: 23px;
+    font-size: 23px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 10px 0;
   }
 `;
 
@@ -87,6 +92,7 @@ const SaibaMaisBtn = styled.button`
   border-radius: 4px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  width: 100%; /* Garante que o botão ocupe toda a largura do CardContent */
 
   &:hover {
     background-color: #009867;
@@ -96,14 +102,20 @@ const SaibaMaisBtn = styled.button`
     text-decoration: none;
     color: white;
     font-weight: bold;
+    display: block; /* Faz o link ocupar toda a largura do botão */
+    height: 100%; /* Garante que o link ocupe a altura do botão */
+    width: 100%; /* Garante que o link ocupe toda a largura do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
 function CardGridComponent() {
   const cards = [
-    { title: 'Onde trabalhamos', text: 'Textinho sobre', link:'/ondetrabalhamos' },
-    { title: 'Desastres explicados', text: 'Textinho sobre' },
-    { title: 'Faça parte do time', text: 'Textinho sobre' }
+    { title: 'Onde trabalhamos', text: 'Obtenha as atualizações mais recentes para o nosso trabalho e descubra onde estamos apoiando comunidades em todo o mundo após desastres e conflitos.', link:'/ondetrabalhamos', image: image2 },
+    { title: 'Desastres explicados', text: 'Tudo o que você precisa saber sobre desastres – desde eventos climáticos extremos até conflitos complexos.', link:'/desastres', image: image3 },
+    { title: 'Faça parte do time', text: 'Be part of the ShelterBox team and inspire your customers, engage your staff, and boost your performance.', link:'/façaparte', image: image6 }
   ];
 
   return (
@@ -112,7 +124,7 @@ function CardGridComponent() {
         <h2>Entenda sobre</h2>
       </SectionTitle>
       <CardRow>
-        {cards.slice(0, 3).map((card, index) => (
+        {cards.map((card, index) => (
           <Card key={index}>
             <CardImage>
               <img src={card.image} alt={card.title} />
@@ -123,14 +135,9 @@ function CardGridComponent() {
 
               <ButtonWrapper>
                 <SaibaMaisBtn>
-                  <Link to="/saibamais">Saiba Mais</Link>
+                  <Link onClick={ScrollToTop} to={card.link}>Saiba Mais</Link>
                 </SaibaMaisBtn>
               </ButtonWrapper>
-
-          <SaibaMaisBtn>
-             <Link onClick={ScrollToTop} to={card.link}>Saiba Mais</Link>
-          </SaibaMaisBtn>
-
             </CardContent>
           </Card>
         ))}
