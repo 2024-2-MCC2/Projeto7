@@ -121,7 +121,7 @@ function AmericaContrs() {
   return (
     <div className="main-content">
       <ContainerSumario>
-        <TituloSumario>Sumário</TituloSumario>
+        <TituloSumario>América:</TituloSumario>
         <TxtSumario onClick={() => scrollToSection('caribe')}>Caribe</TxtSumario>
       </ContainerSumario>
       

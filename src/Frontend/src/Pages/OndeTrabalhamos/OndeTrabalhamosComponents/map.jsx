@@ -107,7 +107,7 @@ function Map() {
                     <Asia src={fotopaquistao} alt='foto paquistão' />
                     <BtnContainer>
                         <AsiaBtn>
-                            <Link onClick={ScrollToTop} to='asia'>Asia</Link>
+                            <Link onClick={ScrollToTop} to='asia'>Ásia</Link>
                         </AsiaBtn>
                     </BtnContainer>
                 </AsiaContainer>
