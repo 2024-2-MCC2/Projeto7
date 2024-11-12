@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import GazaImage from '../../../assets/img/gaza.jpg'
-import BangladeshImage from '../../../assets/img/Bangladesh.jpg'
-import SyriaImage from '../../../assets/img/Syria.jpg'
+import GazaImage from '../../../assets/img/gaza.jpg';
+import BangladeshImage from '../../../assets/img/Bangladesh.jpg';
+import SyriaImage from '../../../assets/img/Syria.jpg';
 
-import ScrollToTop from '../../../ComponentsGerais/ScrollToTop'
-
+import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 
 // Estilos usando styled-components
 const Container = styled.div`
@@ -16,14 +15,13 @@ const Container = styled.div`
   align-items: center;
   padding: 50px;
   background-color: #DFF6F0;
-  height: 400px;  // Aumentando a altura do contêiner
+  height: 400px;
 `;
 
 const LeftSection = styled.div`
   max-width: 50%;
   width: 1500px;
   height: 100%;
-  /* border: 2px solid black; */
 `;
 
 const Title = styled.h2`
@@ -97,7 +95,7 @@ const BtnTrabalhamos = styled.button`
 const RightSection = styled.div`
   max-width: 50%;
   width: 100%;
-  height: 400px;  // Aumentando a altura da seção direita para acomodar os círculos maiores
+  height: 400px;
   background-color: #1ABC9C;
   padding: 20px;
   border-radius: 15px;
@@ -117,18 +115,18 @@ const Images = styled.div`
 `;
 
 const ImageCircle = styled.div`
-  width: 250px;  // Aumentando a largura do círculo
-  height: 250px;  // Aumentando a altura do círculo
+  width: 250px;
+  height: 250px;
   background-color: #D0D0D0;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;  // Para o texto ser posicionado sobre a imagem
-  overflow: hidden;  // Para garantir que a imagem e o texto fiquem dentro do círculo
+  position: relative;
+  overflow: hidden;
 
   &:hover {
-    height: 260px;  // Aumentando o tamanho do círculo ao passar o mouse
+    height: 260px;
     width: 260px;
   }
 
@@ -139,15 +137,15 @@ const ImageCircle = styled.div`
   }
 
   .text {
-    position: absolute;  // Coloca o texto sobre a imagem
-    bottom: 10px;  // Coloca o texto mais próximo da parte inferior
+    position: absolute;
+    bottom: 10px;
     left: 50%;
-    transform: translateX(-50%);  // Centraliza o texto horizontalmente
-    color: white;  // Cor do texto contrastante
-    font-size: 20px;  // Aumentando o tamanho da fonte
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  // Adiciona sombra para melhorar a legibilidade
-    text-align: center;  // Garante que o texto fique centralizado
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
   }
 `;
 

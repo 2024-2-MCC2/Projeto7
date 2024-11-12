@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import camaroonImage from '../../../assets/img/historia de camarão.jpg'
+import ImpactImage from '../../../assets/img/impacthistory.jpg'
 
 import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 
@@ -17,19 +17,21 @@ const HistComponentWrapper = styled.div`
 `;
 
 const ImageSection = styled.div`
-  width: 250px;
-  height: 250px;
+  width: 500px;
+  height: 300px;
   background-color: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 50px;
+ 
 `;
 
 const HistImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius:10px;
 `;
 
 const TitleText = styled.h3`
@@ -75,12 +77,12 @@ function HistComponent() {
   return (
     <HistComponentWrapper>
       <ImageSection>
-        <HistImage src={camaroonImage} alt="História" />
+        <HistImage src={ImpactImage} alt="História" />
       </ImageSection>
       <div>
-        <TitleText>Projeto storytelling nos Camarões</TitleText>
+        <TitleText>Histórias de impacto</TitleText>
         <Text>
-          Convidámos pessoas dos Camarões para partilharem as suas experiências e a importância do abrigo para elas. Saiba como co-criamos uma campanha juntos, dando vida às suas histórias.
+        Conheça as pessoas que seu apoio está ajudando e leia suas histórias poderosas.
         </Text>
         <SaibaMaisBtn>
           <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
