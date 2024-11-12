@@ -1,6 +1,6 @@
 import Logo from '../assets/img/footerlogo.png';
 import styled from 'styled-components';
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { AiOutlineX } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';

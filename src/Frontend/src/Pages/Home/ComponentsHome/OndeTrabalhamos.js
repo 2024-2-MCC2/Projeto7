@@ -159,9 +159,8 @@ const OndeTrabalhamos = () => {
         <Text>Pequeno texto sobre onde trabalhamos</Text>
         <Buttons>
           <BtnDoar>
-            <Link to='/donate'>DOAR</Link>
-          </BtnDoar>
             <Link onClick={ScrollToTop} to='/donate'>DOAR</Link>
+          </BtnDoar>
           <BtnTrabalhamos>
             <Link onClick={ScrollToTop} to='/ondetrabalhamos'>Onde trabalhamos</Link>
           </BtnTrabalhamos>
