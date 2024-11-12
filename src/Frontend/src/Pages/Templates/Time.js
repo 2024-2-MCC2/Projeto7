@@ -13,14 +13,14 @@ const BoxGeral = styled.div`
   width: 100%;
   max-width: 1200px; /* Limita a largura para não ficar grande demais */
   padding: 20px;
-`;
+  `;
 
 // Para centralizar a imagem do grupo
 const BoxImageGeral = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 30px; /* Espaçamento entre imagem e descrição */
-`;
+  `;
 
 const ImageGeral = styled.div`
   background-color: lightblue;
@@ -31,7 +31,7 @@ const ImageGeral = styled.div`
   align-items: center;
   padding: 10px;
   text-align: center;
-`;
+  `;
 
 const TitulodeDescricao = styled.div`
   display: flex;
@@ -39,14 +39,14 @@ const TitulodeDescricao = styled.div`
   align-items: center;
   font-size: 25px;
   padding: 10px;
-`;
+  `;
 
 const BoxPessoaContainer = styled.div`
   display: flex;
   flex-wrap: wrap; /* Permite que os itens que não cabem na linha se movam para a próxima linha */
   justify-content: space-between; /* Espaço entre os items */
   gap: 30px; /* Maior espaçamento entre as colunas */
-`;
+  `;
 
 const BoxPessoa = styled.div`
   display: flex;
@@ -58,7 +58,10 @@ const BoxPessoa = styled.div`
   height: 650px; /* Aumentando a altura das caixas das pessoas */
   width: 30%;  /* Mudando para 30% para garantir que as caixas se ajustem ao espaço disponível */
   padding: 30px; /* Ajustando o padding para que o conteúdo não fique amontoado */
+  border: 2px solid black;
+  background-color: aliceblue;
   box-sizing: border-box; /* Garantir que o padding não afete a largura da caixa */
+
 `;
 
 const BoxImagePessoa1 = styled.div`
