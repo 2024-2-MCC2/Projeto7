@@ -1,21 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import ScrollToTop from '../../../ComponentsGerais/ScrollToTop'
+
+import GazaImage from '../../../assets/img/gaza.jpg';
+import BangladeshImage from '../../../assets/img/Bangladesh.jpg';
+import SyriaImage from '../../../assets/img/Syria.jpg';
+
+import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 
 // Estilos usando styled-components
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 50px;
   background-color: #DFF6F0;
-  height: 300px;
+  height: 400px;
 `;
 
 const LeftSection = styled.div`
   max-width: 50%;
   width: 1500px;
-  height: 150px;
+  height: 100%;
 `;
 
 const Title = styled.h2`
@@ -80,7 +86,7 @@ const BtnTrabalhamos = styled.button`
     background-color: #16a085;
   }
 
-  a{
+  a {
     color: white;
     text-decoration: none;
   }
@@ -89,7 +95,7 @@ const BtnTrabalhamos = styled.button`
 const RightSection = styled.div`
   max-width: 50%;
   width: 100%;
-  height: 300px;
+  height: 400px;
   background-color: #1ABC9C;
   padding: 20px;
   border-radius: 15px;
@@ -109,18 +115,37 @@ const Images = styled.div`
 `;
 
 const ImageCircle = styled.div`
-  width: 180px;
-  height: 180px;
+  width: 250px;
+  height: 250px;
   background-color: #D0D0D0;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
 
-  &:hover{
-    height: 190px;
-    width: 190px;
+  &:hover {
+    height: 260px;
+    width: 260px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
   }
 `;
 
@@ -133,9 +158,10 @@ const OndeTrabalhamos = () => {
         <Title>Onde estamos <br /> trabalhamos?</Title>
         <Text>Pequeno texto sobre onde trabalhamos</Text>
         <Buttons>
+          {/* Botão "Doar" único */}
           <BtnDoar>
             <Link onClick={ScrollToTop} to='/donate'>DOAR</Link>
-            </BtnDoar>
+          </BtnDoar>
           <BtnTrabalhamos>
             <Link onClick={ScrollToTop} to='/ondetrabalhamos'>Onde trabalhamos</Link>
           </BtnTrabalhamos>
@@ -146,9 +172,18 @@ const OndeTrabalhamos = () => {
       <RightSection>
         <RightTitle>Conheça mais sobre esses lugares</RightTitle>
         <Images>
-          <ImageCircle />
-          <ImageCircle />
-          <ImageCircle />
+          <ImageCircle>
+            <img src={GazaImage} alt="Gaza" />
+            <div className="text">Conflito em Gaza</div>
+          </ImageCircle>
+          <ImageCircle>
+            <img src={BangladeshImage} alt="Bangladesh" />
+            <div className="text">Inundação em Bangladesh</div>
+          </ImageCircle>
+          <ImageCircle>
+            <img src={SyriaImage} alt="Conflito na Siria" />
+            <div className="text">Conflito na Siria</div>
+          </ImageCircle>
         </Images>
       </RightSection>
     </Container>
