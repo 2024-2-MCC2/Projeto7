@@ -21,11 +21,15 @@ const VideoPlayer = styled.iframe`
 `;
 
 const TextsContainer = styled.div`
-    border: 2px solid black;
-    margin: 100px 0px;
+    border-bottom: 4px solid #15AC86;
+    border-left: 4px solid #15AC86;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    margin: 70px 0px;
+    padding: 15px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    /* align-items: center; */
     gap: 60px;
 `;
 

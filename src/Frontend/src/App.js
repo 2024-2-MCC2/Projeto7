@@ -15,6 +15,7 @@ import AfricaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/Afri
 import AsiaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AsiaContrs.jsx';
 import Footer from './ComponentsGerais/Footer.js';
 import Contato from './Pages/Contato/Contato.js';
+import DesastresExplicados from './Pages/Templates/DesastresExplicados.jsx'
 import GlobalStyles from './createGlobalStyle.js';
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/nossotrabalho" element={<NossoTrabalho />} />
         <Route path="/tome-acao" element={<TomeAcao />} />
+        <Route path="/desastresexplicados" element={<DesastresExplicados />} />
         <Route path="/ondetrabalhamos" element={<OndeTrabalhamos />} />
         <Route path="/saibamais" element={<SaibaMais />} />
         <Route path="/donate" element={<Donate />} />

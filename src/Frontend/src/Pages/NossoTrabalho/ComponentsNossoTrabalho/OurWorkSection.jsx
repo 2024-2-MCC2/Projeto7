@@ -35,9 +35,10 @@ const Text = styled.p`
 
 const ImgContainer = styled.div`
   /* flex: 1; */
-  width: 650px;
-  height: 450px;
-  border: 2px solid black;   
+  width: 1000px;
+  height: 500px;
+  border: 2px solid black;
+  margin-right: 100px;
 `
 
 const Img = styled.img`
