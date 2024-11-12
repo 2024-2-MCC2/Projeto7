@@ -4,11 +4,8 @@ import { Link } from 'react-router-dom';
 import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 import HistoriaCard from './HistoriaCard';
 
-import image1 from '../../../assets/img/impacthistory.jpg';
 import image2 from '../../../assets/img/ondeTrabalhamos.jpg';
 import image3 from '../../../assets/img/disatersExplain.jpg';
-import image4 from '../../../assets/img/bookClub.jpg';
-import image5 from '../../../assets/img/gift.jpg';
 import image6 from '../../../assets/img/DreamTeam.jpg';
 
 const CardGrid = styled.div`

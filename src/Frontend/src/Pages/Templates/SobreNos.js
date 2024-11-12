@@ -7,7 +7,6 @@ import Carousel from "../Templates/CarrousselComponents";
 
 
 const Background1 = styled.div`
-padding: 10px;
  background-color: #bdfcd2;
  display: flex;
  justify-content: space-around;
@@ -316,7 +315,7 @@ const BoxButtonConheca = styled.div`
 
 function SobreNos (){
 return (
-    <div>
+    <div className="main-content">
         <Background1>
 
         <ImageDisplay>
