@@ -10,7 +10,7 @@ import ScrollToTop from '../../../ComponentsGerais/ScrollToTop';
 const HistComponentWrapper = styled.div`
   display: flex;
   align-items: center;
-  background-color: #1f422e;
+  background-color: #ededed;
   padding: 20px;
   color: white;
   height: 300px;
@@ -36,9 +36,11 @@ const TitleText = styled.h3`
 font-size: 40px;
 font-weight: bold;
 font-family: Arial, Helvetica, sans-serif;
+color: black;
 `
 const Text = styled.p`
 font-size: 23px;
+color: black;
 `
 
 const SaibaMaisBtn = styled.button`
@@ -47,7 +49,8 @@ const SaibaMaisBtn = styled.button`
   align-items: center;
   background-color: #00b17d;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
   border: none;
   padding: 10px 20px;
   border-radius: 2px;

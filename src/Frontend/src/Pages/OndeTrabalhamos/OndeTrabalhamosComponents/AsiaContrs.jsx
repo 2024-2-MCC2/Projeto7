@@ -180,7 +180,7 @@ function CarrosselDeImagens({ images }) {
     return (
       <div className="main-content">
         <ContainerSumario>
-          <TituloSumario>Sumário</TituloSumario>
+          <TituloSumario>Ásia:</TituloSumario>
           <TxtSumario onClick={() => scrollToSection('bangladesh')}>Bangladesh</TxtSumario>
           <TxtSumario onClick={() => scrollToSection('gaza')}>Gaza</TxtSumario>
           <TxtSumario onClick={() => scrollToSection('iemen')}>Iemen</TxtSumario>

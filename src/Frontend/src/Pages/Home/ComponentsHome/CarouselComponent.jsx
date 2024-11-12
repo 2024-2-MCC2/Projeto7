@@ -46,12 +46,12 @@ const PrevButton = styled.button`
   box-shadow: 2px 2px 2px black;
   cursor: pointer;
   z-index: 1;
-
-  &:hover{
-      background-color: black;
-      color: white;
-      box-shadow: 2px 2px 2px green;
-  }
+  
+&:hover{
+    background-color: black;
+    color: #ffffff;
+    box-shadow: 2px 2px 2px green;
+}
 `;
 
 const NextButton = styled.button`

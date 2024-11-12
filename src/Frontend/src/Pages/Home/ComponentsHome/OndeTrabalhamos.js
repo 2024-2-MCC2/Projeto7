@@ -13,6 +13,7 @@ import ScrollToTop from '../../../ComponentsGerais/ScrollToTop'
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 50px;
   background-color: #DFF6F0;
   height: 400px;  // Aumentando a altura do contêiner
@@ -21,7 +22,8 @@ const Container = styled.div`
 const LeftSection = styled.div`
   max-width: 50%;
   width: 1500px;
-  height: 150px;
+  height: 100%;
+  /* border: 2px solid black; */
 `;
 
 const Title = styled.h2`

@@ -11,8 +11,8 @@ import CarouselComponent from './ComponentsHome/CarouselComponent.jsx';
         <div className="main-content">
           <CarouselComponent/>
           <OndeTrabalhamos/>
-          <HistComponent/>
           <CardGridComponent/>
+          {/* <HistComponent/> */}
           <ShelterBoxComponent/> 
          </div>
     )
