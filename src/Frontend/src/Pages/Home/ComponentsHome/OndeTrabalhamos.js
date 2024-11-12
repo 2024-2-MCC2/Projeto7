@@ -158,6 +158,7 @@ const OndeTrabalhamos = () => {
         <Title>Onde estamos <br /> trabalhamos?</Title>
         <Text>Pequeno texto sobre onde trabalhamos</Text>
         <Buttons>
+          {/* Botão "Doar" único */}
           <BtnDoar>
             <Link onClick={ScrollToTop} to='/donate'>DOAR</Link>
           </BtnDoar>
@@ -167,6 +168,7 @@ const OndeTrabalhamos = () => {
         </Buttons>
       </LeftSection>
 
+      {/* Seção Direita */}
       <RightSection>
         <RightTitle>Conheça mais sobre esses lugares</RightTitle>
         <Images>
