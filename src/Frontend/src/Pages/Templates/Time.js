@@ -203,7 +203,7 @@ function Time() {
               <p>Aqui vai um breve texto da sua participação no trabalho</p>
             </DescricaoPessoa1>
             <LinkPessoa1>
-              <a href="#">Link para mais informações</a>
+              <a href="https://br.linkedin.com/in/felipe-wakasa-76a93a257">Link para mais informações</a>
             </LinkPessoa1>
           </BoxPessoa>
 
