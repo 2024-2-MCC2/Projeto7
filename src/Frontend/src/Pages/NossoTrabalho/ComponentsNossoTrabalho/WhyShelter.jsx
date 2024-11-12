@@ -24,7 +24,7 @@ const BoldText = styled.p`
     font-size: 22px;
 `
 
-const ImgContainer = sytled.div`
+const ImgContainer = styled.div`
     
 `
 

@@ -2,7 +2,7 @@
 
 function DesastresExplicados (){
     return(
-        gay
+        <h1>gay</h1>
     )
 }
 export default DesastresExplicados
