@@ -1,222 +1,106 @@
-import { Link } from 'react-router-dom'
-import Logo from '../assets/img/headerlogobranca.png'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Logo from '../assets/img/headerlogobranca.png';
 import ScrollToTop from './ScrollToTop';
 
 const NavImage = styled.img`
   padding-left: 20px;
   max-width: 260px;
-`
+  padding: 0%;
+ `;
 
 const NavContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1D371B;
-    height: 150px;
-`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1D371B;
+  height: 150px;
+`;
 
-const GroupNav = styled.div` 
-display: flex;
-list-style-type: none;
-`
+const GroupNav = styled.ul`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+  padding: 0%;
+`;
 
-const ButtonNav = styled.button`
- display: flex; 
- justify-content: center;
- align-items: center;
- font-size: 1em;
- font-weight: bold;
- background-color: #1D371B;
-  margin: 1em 2em;
+const ButtonNav = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
   padding: 0.25em 1em;
-  border: none;
-  color: #fff;
-  width: 220px;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
-&:hover {
-  text-decoration: underline 2px;
-}
-
-a{
-  font-size: 24px;
-  color: #fff;
-  text-decoration: none;
-}
-`
-
-const TopButtons = styled.div`
-display: flex;
-`
 const ButtonGroup = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-end;
-`
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+`;
 
-const ButtonCadastro = styled.button`
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 10px;
-width: 175px;
-height: 70px;
-font-size: 24px;
-font-weight: bold;
-background-color: #15AC86;
-border-radius: 2px;
-transition: 0.35s ease-in-out;
-border: none;
-
-&:hover{
-  background-color: #108265;
-  cursor: pointer;
-}
-
-a{
-  color: #FFF;
+const Button = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
   text-decoration: none;
-}
-`
+  width: 175px;
+  height: 70px;
+  border: none;
+  border-radius: 2px;
+  transition: background-color 0.35s;
+  background-color: ${(props) => props.bgColor};
 
-const ButtonLogin = styled.button`
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 10px;
-width: 175px;
-height: 70px;
-font-size: 24px;
-font-weight: bold;
-background-color: #DAFFF6;
-border-radius: 2px;
-transition: 0.35s ease-in-out;
-border: none;
+  &:hover {
+    background-color: ${(props) => props.hoverColor};
+    cursor: pointer;
+  }
+`;
 
-&:hover{
-  background-color: #88c8b8;
-  cursor: pointer;
-}
-
-a{
-  color: #0D2C1A;
-  text-decoration: none;
-}
-`
-
-const ButtonDoar = styled.button`
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 10px;
-width: 175px;
-height: 70px;
-font-size: 24px;
-font-weight: bold;
-background-color: #E73131;
-border-radius: 2px;
-transition: 0.35s ease-in-out;
-border: none;
-
-a{
-  color: #FFF;
-  text-decoration: none;
-}
-
-&:hover{
-  background-color: #831f1f;
-  cursor: pointer;
-}
-`
-
-const HeaderFixed = styled.div`
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 1000; 
-background-color: #fff; 
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-height: 60px; /* Altura fixa do header */
-`
-
-// const SearchBar = styled.input`
-// margin-top: 15px;
-// margin-right: 10px;
-// width: 75%;
-// height: 30px;
-// border: 2px solid black;
-// outline: none;
-// border-radius: 2px;
-// background-color: #D9D9D9;
-// `
-
-
-
-
+const HeaderFixed = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+`;
 
 export default function Header() {
   return (
     <HeaderFixed>
-      <nav className="nav">
-        <NavContainer>
-          <Link onClick={ScrollToTop} to="/">
-            <NavImage src={Logo} alt="Logo" className="Logo" />
-          </Link>
+      <NavContainer>
+        <Link to="/" onClick={ScrollToTop}>
+          <NavImage src={Logo} alt="Logo" />
+        </Link>
 
-          <ul>
-            <GroupNav>
-              <ButtonNav>
-                <Link onClick={ScrollToTop} to="/nossotrabalho">Nosso Trabalho</Link>
-              </ButtonNav>
+        <GroupNav>
+          {['Nosso Trabalho', 'Histórias', 'Sobre Nós', 'Tome Ação'].map((text) => (
+            <ButtonNav key={text} to={`/${text.toLowerCase().replace(' ', '-')}`} onClick={ScrollToTop}>
+              {text}
+            </ButtonNav>
+          ))}
+        </GroupNav>
 
-              <ButtonNav>
-                <Link onClick={ScrollToTop} to="/historias">Histórias</Link>
-              </ButtonNav>
-
-              <ButtonNav>
-                <Link onClick={ScrollToTop} to="/sobre-nos">Sobre Nós</Link>
-              </ButtonNav>
-
-              <ButtonNav>
-                <Link onClick={ScrollToTop} to="/tome-acao">Tome Ação</Link>
-              </ButtonNav>
-            </GroupNav>
-          </ul>
-
-          <ButtonGroup>
-            <TopButtons>
-              <ButtonCadastro>
-                <Link onClick={ScrollToTop} to="/cadastro">Cadastro</Link>
-              </ButtonCadastro>
-
-              <ButtonDoar>
-                <Link onClick={ScrollToTop} to="/donate">Doação</Link>
-              </ButtonDoar>
-
-              <ButtonLogin>
-                <Link onClick={ScrollToTop} to="/login">Login</Link>
-              </ButtonLogin>
-            </TopButtons>
-          </ButtonGroup>
-        </NavContainer>
-      </nav>
+        <ButtonGroup>
+          <Button to="/cadastro" bgColor="#15AC86" hoverColor="#108265" onClick={ScrollToTop}>Cadastro</Button>
+          <Button to="/login" bgColor="#DAFFF6" hoverColor="#88c8b8" onClick={ScrollToTop} style={{ color: '#0D2C1A' }}>Login</Button>
+          <Button to="/donate" bgColor="#E73131" hoverColor="#831f1f" onClick={ScrollToTop}>Doação</Button>
+        </ButtonGroup>
+      </NavContainer>
     </HeaderFixed>
   );
 }
-
-function CustomLink({ href, children, ...props }) { //CustomLink renderiza um link personalizado com funcionalidade de ativação baseada na url atual
-  const path = window.location.pathname
-  return (
-    <li className={path === href ? "active" : ""}>
-      <a href={href} {...props}> {children} </a>
-    </li>
-  )
-}
-
-//essa passagem esta verificando se o caminho atual é igual ao href e se for adiciona a classe active ao elemento li e renderiza o elemento a com o href passando as propriedades adicionais ("props") e renderiza o conteudo do link dentro do elemento a
-
-//children é o conteúdo do link
-//href é o caminho
-//props são propriedades adicionais 
