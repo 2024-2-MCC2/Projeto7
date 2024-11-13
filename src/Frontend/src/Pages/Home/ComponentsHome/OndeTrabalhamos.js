@@ -32,9 +32,10 @@ const Title = styled.h2`
 
 const Text = styled.p`
   color: #333;
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 10px;
   margin-bottom: 20px;
+  font-family:Arial, Helvetica, sans-serif;
 `;
 
 const Buttons = styled.div`
@@ -53,6 +54,7 @@ const BtnDoar = styled.button`
   font-weight: bold;
   height: 60px;
   width: 160px;
+  border-radius:5px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 
@@ -77,6 +79,7 @@ const BtnTrabalhamos = styled.button`
   font-weight: bold;
   height: 60px;
   width: 160px;
+  border-radius:5px;
   padding: 10px 20px;
   font-size: 20px;
   cursor: pointer;

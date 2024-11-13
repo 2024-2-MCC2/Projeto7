@@ -92,7 +92,8 @@ const SupportTitle = styled.h2`
 
 const SupportParagraphs = styled.div`
   color: #333;
-  font-size: 16px;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   max-width: 800px;
   margin: 0 auto;
@@ -117,6 +118,11 @@ const DonationOptions = styled.div`
 const DonationOption = styled.div`
   text-align: center;
   max-width: 200px;
+  min-height: 300px; /* Define uma altura mínima para alinhar os botões */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const DonationImage = styled.img`
@@ -131,8 +137,9 @@ const DonationOptionTitle = styled.h3`
 `;
 
 const DonationOptionText = styled.p`
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 15px;
+  flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
 `;
 
 const DonationButton = styled.button`
@@ -143,10 +150,10 @@ const DonationButton = styled.button`
   cursor: pointer;
   font-size: 14px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;  /* Adicionando transição suave */
+  transition: background-color 0.3s ease;  
   
   &:hover {
-    background-color: #1b5e20;  /* Alteração da cor de fundo no hover */
+    background-color: #1b5e20;  
   }
 `;
 
@@ -171,4 +178,3 @@ const BooImage = styled.img`
 `;
 
 export default SupportComponent;
-

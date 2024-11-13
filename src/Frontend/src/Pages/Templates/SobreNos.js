@@ -5,6 +5,9 @@ import Image from "../../assets/img/shelter.jpg";
 import {Link} from 'react-router-dom';
 import Carousel from "../Templates/CarrousselComponents";
 
+import CarrosselImage1 from "../../assets/img/fotocaribe1.jpg";
+import CarrosselImage2 from "../../assets/img/fotosomalia1.png";
+import CarrosselImage3 from "../../assets/img/fotopaquistao3.png";
 
 const Background1 = styled.div`
  background-color: #bdfcd2;
@@ -66,14 +69,16 @@ const Textos = styled.div`
 const T2 = styled.text`
 justify-content: center;
    display: flex;
-   font-size: 20px;
+   font-size: 22px;
+   font-family:Arial, Helvetica, sans-serif;
 `
 
 const T3 = styled.text`
    display: flex;
    margin-top: 4%;
    margin-left: 4%;
-   font-size: 20px;
+   font-size: 22px;
+   font-family:Arial, Helvetica, sans-serif;
 
 `
 
@@ -88,9 +93,15 @@ const CarouselBox = styled.div`
 `
 
 const items = [
-   <div style={{backgroundColor: 'lightblue', height: '400px', width: '700px', alignItems: 'center', justifyContent: 'center' }}>  </div>,
-   <div style={{backgroundColor: 'lightcoral', height: '400px',width: '700px', alignItems: 'center', justifyContent: 'center' }}>  </div>,
-   <div style={{backgroundColor: 'lightgreen', height: '400px',width: '700px',  alignItems: 'center', justifyContent: 'center' }}></div> 
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+     <img src={CarrosselImage1} alt="Imagem 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>,
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+     <img src={CarrosselImage2} alt="Imagem 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>,
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+     <img src={CarrosselImage3} alt="Imagem 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
 ];
 
 
@@ -224,7 +235,7 @@ justify-content: center;
 const DonateText = styled.text` 
 display: flex;
 justify-content: center;
-font-size: 20px;
+font-size: 22px;
 `
 
  const DonateButton = styled.button`
@@ -281,7 +292,7 @@ const Descricao = styled.text`
    font-weight: bold;
      justify-content: center;
      text-align: center;
-     font-size: 20px;
+     font-size: 22px;
 `
 const ButtonConheca = styled.button` 
 display: flex;

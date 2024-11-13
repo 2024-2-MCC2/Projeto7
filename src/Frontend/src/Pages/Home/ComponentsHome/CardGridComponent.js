@@ -55,8 +55,7 @@ const CardImage = styled.div`
 `;
 
 const CardContent = styled.div`
-  height: 200px;
-  width: 100%;
+  height: 300px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,9 +66,11 @@ const CardContent = styled.div`
   }
 
   p {
-    font-size: 16px;
+    font-size: 22px; 
     line-height: 1.4;
     margin: 10px 0;
+    overflow: hidden; 
+    text-align: center;
   }
 `;
 
@@ -89,7 +90,7 @@ const SaibaMaisBtn = styled.button`
   border-radius: 4px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
-  width: 100%; /* Garante que o botão ocupe toda a largura do CardContent */
+  width: 100%;
 
   &:hover {
     background-color: #009867;
@@ -99,9 +100,9 @@ const SaibaMaisBtn = styled.button`
     text-decoration: none;
     color: white;
     font-weight: bold;
-    display: block; /* Faz o link ocupar toda a largura do botão */
-    height: 100%; /* Garante que o link ocupe a altura do botão */
-    width: 100%; /* Garante que o link ocupe toda a largura do botão */
+    display: block; 
+    height: 100%; 
+    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
