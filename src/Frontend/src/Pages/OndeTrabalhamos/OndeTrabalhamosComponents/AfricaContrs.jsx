@@ -133,12 +133,6 @@ const Text = styled.p`
   font-size: 21px;
   margin-left: 50px;
 `;
-const BoldText = styled.p`
-  margin-top: 10px;
-  font-size: 22px;
-  margin-left: 50px;
-  font-weight: bold;
-`;
 
 function CarrosselDeImagens({ images }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -194,96 +188,132 @@ function CarrosselDeImagens({ images }) {
           <TxtSumario onClick={() => scrollToSection('somalia')}>Somalia</TxtSumario>
         </ContainerSumario>
 
-        {/* //burkina faso */}
-        <SectionContainer id="burkinafaso">
-        <CarrosselDeImagens images={[fotoburkina1, fotoburkina2, fotoburkina3]} />
-          <TextContainer>
-            <TipoDeDesastre>Conflito</TipoDeDesastre>
-            <Title>Burkina Faso</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-        </SectionContainer>
-  
-        {/* //camaroes */}
-        <SectionContainer id="camaroes">
-          <TextContainer>
-            <TipoDeDesastre>Crise no Lago Bacia de Chade</TipoDeDesastre>
-            <Title>Camarões</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-          <CarrosselDeImagens images={[fotocamaroes1, fotocamaroes2, fotocamaroes3]} />
-        </SectionContainer>
-  
-        {/* //chde */}
-        <SectionContainer id="chade">
-          <CarrosselDeImagens images={[fotochade1, fotochade2]} />
-          <TextContainer>
-            <TipoDeDesastre>Conflito</TipoDeDesastre>
-            <Title>Chade</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-        </SectionContainer>
-  
-        {/* //etiopia*/}
-        <SectionContainer id="etiopia">
-          <TextContainer>
-            <TipoDeDesastre>Conflito e Seca</TipoDeDesastre>
-            <Title>Etiópia</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-          <CarrosselDeImagens images={[fotoetiopia1, fotoetiopia2, fotoetiopia3]} />
-        </SectionContainer>
-  
-        {/* //malawi*/}
-        <SectionContainer id="malawi">
-          <CarrosselDeImagens images={[fotomalawi1, fotomalawi2, fotomalawi3]} />
-          <TextContainer>
-            <TipoDeDesastre>Enchentes</TipoDeDesastre>
-            <Title>Malawi</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-        </SectionContainer>
+        {/* // Burkina Faso */}
+<SectionContainer id="burkinafaso">
+  <CarrosselDeImagens images={[fotoburkina1, fotoburkina2, fotoburkina3]} />
+  <TextContainer>
+    <TipoDeDesastre>Conflito</TipoDeDesastre>
+    <Title>Burkina Faso</Title>
+    <Text>
+      Devido ao aumento dos conflitos armados, milhares de famílias foram obrigadas a fugir de suas casas, vivendo em condições extremamente precárias.
+    </Text>
+    <Text>
+      A ShelterBox atua oferecendo <strong>abrigos emergenciais, kits de cozinha e redes contra mosquitos</strong>, ajudando a restaurar a dignidade e a segurança das famílias deslocadas.
+    </Text>
+    <Text>
+      Esse suporte é essencial, pois muitas dessas pessoas enfrentam a falta de abrigo seguro e a escassez de recursos básicos.
+    </Text>
+  </TextContainer>
+</SectionContainer>
 
-        {/* //maçambique */}
-        <SectionContainer id="moçambique">
-          <TextContainer>
-            <TipoDeDesastre>Conflito</TipoDeDesastre>
-            <Title>Moçambique</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-          <CarrosselDeImagens images={[fotomozambique1, fotomozambique2, fotomozambique3]} />
-        </SectionContainer>
+{/* // Camarões */}
+<SectionContainer id="camaroes">
+  <TextContainer>
+    <TipoDeDesastre>Crise no Lago Bacia de Chade</TipoDeDesastre>
+    <Title>Camarões</Title>
+    <Text>
+      Em meio à <strong>crise humanitária na Bacia do Lago Chade</strong>, milhares de famílias vivem como refugiados, após serem forçadas a fugir devido à violência e instabilidade.
+    </Text>
+    <Text>
+      Para apoiar essas comunidades vulneráveis, a ShelterBox oferece <strong>tendas, sistemas de purificação de água e luzes solares</strong>, ajudando a reduzir riscos e oferecer um ambiente mais seguro.
+    </Text>
+    <Text>
+      Este apoio permite que as famílias enfrentem as adversidades com um mínimo de conforto e esperança de recomeço.
+    </Text>
+  </TextContainer>
+  <CarrosselDeImagens images={[fotocamaroes1, fotocamaroes2, fotocamaroes3]} />
+</SectionContainer>
 
-        {/* //somalia */}
-        <SectionContainer id="somalia">
-          <CarrosselDeImagens images={[fotosomalia1, fotosomalia2, fotosomalia3]} />
-          <TextContainer>
-            <TipoDeDesastre>Conflito e Seca</TipoDeDesastre>
-            <Title>Somália</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-        </SectionContainer>
+{/* // Chade */}
+<SectionContainer id="chade">
+  <CarrosselDeImagens images={[fotochade1, fotochade2]} />
+  <TextContainer>
+    <TipoDeDesastre>Conflito</TipoDeDesastre>
+    <Title>Chade</Title>
+    <Text>
+      Com a contínua violência, milhares de pessoas no Chade vivem deslocadas, enfrentando condições severas e sem acesso a itens essenciais.
+    </Text>
+    <Text>
+      A ShelterBox trabalha fornecendo <strong>abrigos temporários e equipamentos de higiene</strong> para ajudar as famílias a superarem os impactos físicos e emocionais do deslocamento.
+    </Text>
+    <Text>
+      Esse auxílio é fundamental para que as famílias tenham um lugar seguro enquanto enfrentam o trauma e a incerteza.
+    </Text>
+  </TextContainer>
+</SectionContainer>
+
+{/* // Etiópia */}
+<SectionContainer id="etiopia">
+  <TextContainer>
+    <TipoDeDesastre>Conflito e Seca</TipoDeDesastre>
+    <Title>Etiópia</Title>
+    <Text>
+      A combinação de conflitos e seca devastadora deixou milhões de pessoas sem acesso a moradia e recursos básicos.
+    </Text>
+    <Text>
+      A ShelterBox provê <strong>tendas e filtros de água</strong>, auxiliando essas famílias a lidar com a falta de recursos e a insegurança alimentar.
+    </Text>
+    <Text>
+      Esse apoio reduz o sofrimento e permite que as comunidades enfrentem os desafios da crise ambiental e humanitária.
+    </Text>
+  </TextContainer>
+  <CarrosselDeImagens images={[fotoetiopia1, fotoetiopia2, fotoetiopia3]} />
+</SectionContainer>
+
+{/* // Malawi */}
+<SectionContainer id="malawi">
+  <CarrosselDeImagens images={[fotomalawi1, fotomalawi2, fotomalawi3]} />
+  <TextContainer>
+    <TipoDeDesastre>Enchentes</TipoDeDesastre>
+    <Title>Malawi</Title>
+    <Text>
+      As recentes enchentes deixaram milhares de pessoas desabrigadas, destruindo comunidades inteiras e colocando as famílias em situação de extrema necessidade.
+    </Text>
+    <Text>
+      Para ajudar, a ShelterBox fornece <strong>kits de cozinha, abrigos temporários e luzes solares</strong>, oferecendo às famílias um ponto de partida para recomeçar.
+    </Text>
+    <Text>
+      Esse suporte imediato é crucial para a recuperação e segurança das famílias afetadas.
+    </Text>
+  </TextContainer>
+</SectionContainer>
+
+{/* // Moçambique */}
+<SectionContainer id="moçambique">
+  <TextContainer>
+    <TipoDeDesastre>Conflito</TipoDeDesastre>
+    <Title>Moçambique</Title>
+    <Text>
+      O aumento da violência forçou milhares de pessoas a deixar suas casas, deixando famílias em Moçambique em situações de vulnerabilidade.
+    </Text>
+    <Text>
+      A ShelterBox oferece <strong>abrigos emergenciais e redes de proteção contra mosquitos</strong>, fornecendo um refúgio seguro para aqueles que perderam tudo.
+    </Text>
+    <Text>
+      Este apoio é essencial para proporcionar segurança e esperança durante tempos difíceis.
+    </Text>
+  </TextContainer>
+  <CarrosselDeImagens images={[fotomozambique1, fotomozambique2, fotomozambique3]} />
+</SectionContainer>
+
+{/* // Somália */}
+<SectionContainer id="somalia">
+  <CarrosselDeImagens images={[fotosomalia1, fotosomalia2, fotosomalia3]} />
+  <TextContainer>
+    <TipoDeDesastre>Conflito e Seca</TipoDeDesastre>
+    <Title>Somália</Title>
+    <Text>
+      A Somália enfrenta uma crise humanitária complexa devido ao conflito e à seca prolongada, deixando milhões de pessoas sem acesso a abrigos e água limpa.
+    </Text>
+    <Text>
+      A ShelterBox responde com <strong>abrigos, filtros de água e kits de higiene</strong>, ajudando as famílias a sobreviverem e enfrentarem a insegurança diária.
+    </Text>
+    <Text>
+      Esse apoio é vital para aliviar as condições de vida severas e dar esperança para o futuro.
+    </Text>
+  </TextContainer>
+</SectionContainer>
+
       </div>
     );
   }

@@ -137,138 +137,139 @@ const BoldText = styled.p`
 `;
 
 function CarrosselDeImagens({ images }) {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-    // timer geral para o carrossel
-    useEffect(() => {
-      const timer = setInterval(() => {
-        setCurrentImageIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        );
-      }, 5000);
-      
-      return () => clearInterval(timer);
-    }, [images.length]);
-  
-    return (
-      // carrossel de imagens
-      <ImageContainer>
-        {images.map((image, index) => (
-          <SectionImage
-            key={index}
-            src={image}
-            alt={`Imagem ${index + 1}`}
-            currentImageIndex={currentImageIndex}
-            style={{
-              left: `${index * 100}%`
-            }}
-          />
-        ))}
-      </ImageContainer>
-    );
-  }
-  
-  // scroll para as seções
-  function AfricaContrs() {
-    function scrollToSection(id) {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // timer geral para o carrossel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    // carrossel de imagens
+    <ImageContainer>
+      {images.map((image, index) => (
+        <SectionImage
+          key={index}
+          src={image}
+          alt={`Imagem ${index + 1}`}
+          currentImageIndex={currentImageIndex}
+          style={{
+            left: `${index * 100}%`
+          }}
+        />
+      ))}
+    </ImageContainer>
+  );
+}
+
+// scroll para as seções
+function AfricaContrs() {
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
-  
-    return (
-      <div className="main-content">
-        <ContainerSumario>
-          <TituloSumario>Ásia:</TituloSumario>
-          <TxtSumario onClick={() => scrollToSection('bangladesh')}>Bangladesh</TxtSumario>
-          <TxtSumario onClick={() => scrollToSection('gaza')}>Gaza</TxtSumario>
-          <TxtSumario onClick={() => scrollToSection('iemen')}>Iemen</TxtSumario>
-          <TxtSumario onClick={() => scrollToSection('Líbano')}>Líbano</TxtSumario>
-          <TxtSumario onClick={() => scrollToSection('paquistao')}>Paquistão</TxtSumario>
-          <TxtSumario onClick={() => scrollToSection('síria')}>Síria</TxtSumario>
-        </ContainerSumario>
-
-        {/* //Bangladesh */}
-        <SectionContainer id="bangladesh">
-        <CarrosselDeImagens images={[fotobangladesh1, fotobangladesh2, fotobangladesh3]} />
-          <TextContainer>
-            <TipoDeDesastre>Enchentes</TipoDeDesastre>
-            <Title>Bangladesh</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-        </SectionContainer>
-  
-        {/* //gaza */}
-        <SectionContainer id="gaza">
-          <TextContainer>
-            <TipoDeDesastre>Conflito</TipoDeDesastre>
-            <Title>Gaza</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-          <CarrosselDeImagens images={[fotogaza1, fotogaza2, fotogaza3]} />
-        </SectionContainer>
-  
-        {/* //iemen */}
-        <SectionContainer id="iemen">
-          <CarrosselDeImagens images={[fotoiemen1,fotoiemen2,fotoiemen3]} />
-          <TextContainer>
-            <TipoDeDesastre>Conflito</TipoDeDesastre>
-            <Title>Iemen</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-        </SectionContainer>
-
-        {/* //libano*/}
-        <SectionContainer id="Líbano">
-          <TextContainer>
-            <TipoDeDesastre>Conflito</TipoDeDesastre>
-            <Title>Líbano</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-          <CarrosselDeImagens images={[fotolibano1, fotolibano2]} />
-        </SectionContainer>
-
-        {/* //paquistao*/}
-        <SectionContainer id="paquistao">
-          <CarrosselDeImagens images={[fotopaquistao1, fotopaquistao2, fotopaquistao3]} />
-          <TextContainer>
-            <TipoDeDesastre>Enchentes</TipoDeDesastre>
-            <Title>Paquistão</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-        </SectionContainer>
-  
-        {/* //síria*/}
-        <SectionContainer id="síria">
-          <TextContainer>
-            <TipoDeDesastre>Conflito</TipoDeDesastre>
-            <Title>Síria</Title>
-            <BoldText>Milhares de pessoas no Caribe receberam abrigo emergencial após o furacão Beryl deixar um rastro de devastação nas ilhas.</BoldText>
-            <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Carriacou e Petite Martinique.</Text>
-            <Text>Alguns temem que levará anos até que consigam reconstruir suas casas. É por isso que a ajuda com abrigos emergenciais pode mudar vidas quando as pessoas foram deixadas com tão pouco.</Text>
-            <BoldText>O pico da temporada de furacões está chegando. Sua doação hoje pode nos ajudar a responder a desastres ao redor do mundo, onde quer que sejamos necessários.</BoldText>
-          </TextContainer>
-          <CarrosselDeImagens images={[fotosiria1, fotosiria2, fotosiria3]} />
-        </SectionContainer>
-
-      </div>
-    );
   }
-  
-  export default AfricaContrs;
+
+  return (
+    <div className="main-content">
+      <ContainerSumario>
+        <TituloSumario>Ásia:</TituloSumario>
+        <TxtSumario onClick={() => scrollToSection('bangladesh')}>Bangladesh</TxtSumario>
+        <TxtSumario onClick={() => scrollToSection('gaza')}>Gaza</TxtSumario>
+        <TxtSumario onClick={() => scrollToSection('iemen')}>Iemen</TxtSumario>
+        <TxtSumario onClick={() => scrollToSection('Líbano')}>Líbano</TxtSumario>
+        <TxtSumario onClick={() => scrollToSection('paquistao')}>Paquistão</TxtSumario>
+        <TxtSumario onClick={() => scrollToSection('síria')}>Síria</TxtSumario>
+      </ContainerSumario>
+
+      {/* //Bangladesh */}
+      <SectionContainer id="bangladesh">
+        <CarrosselDeImagens images={[fotobangladesh1, fotobangladesh2, fotobangladesh3]} />
+        <TextContainer>
+          <TipoDeDesastre>Enchentes</TipoDeDesastre>
+          <Title>Bangladesh</Title>
+          <BoldText>Milhares de pessoas no Bangladesh estão enfrentando grandes dificuldades devido às enchentes que devastaram o país.</BoldText>
+          <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em áreas afetadas pelas inundações.</Text>
+          <Text>As famílias lutam para reconstruir suas casas, e a ajuda de abrigos emergenciais pode transformar vidas nessas condições extremas.</Text>
+          <BoldText>A sua doação pode fazer a diferença, ajudando as vítimas das enchentes no Bangladesh e em outras regiões do mundo.</BoldText>
+        </TextContainer>
+      </SectionContainer>
+
+      {/* //Gaza */}
+      <SectionContainer id="gaza">
+        <TextContainer>
+          <TipoDeDesastre>Conflito</TipoDeDesastre>
+          <Title>Gaza</Title>
+          <BoldText>Milhares de pessoas em Gaza estão precisando de abrigo e apoio devido ao longo conflito na região.</BoldText>
+          <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para pessoas desabrigadas em Gaza.</Text>
+          <Text>As famílias enfrentam a destruição de suas casas, e a assistência emergencial é crucial para garantir sua sobrevivência e dignidade.</Text>
+          <BoldText>O conflito em Gaza continua a impactar milhares, e sua doação pode ajudar a oferecer abrigo e alívio a quem mais precisa.</BoldText>
+        </TextContainer>
+        <CarrosselDeImagens images={[fotogaza1, fotogaza2, fotogaza3]} />
+      </SectionContainer>
+
+      {/* //Iémen */}
+      <SectionContainer id="iemen">
+        <CarrosselDeImagens images={[fotoiemen1, fotoiemen2, fotoiemen3]} />
+        <TextContainer>
+          <TipoDeDesastre>Conflito</TipoDeDesastre>
+          <Title>Iémen</Title>
+          <BoldText>O Iémen está enfrentando uma grave crise humanitária devido ao conflito em andamento.</BoldText>
+          <Text>Estamos fornecendo apoio essencial, como tendas, redes contra mosquitos, luzes solares e kits de cozinha, para as pessoas afetadas pela guerra.</Text>
+          <Text>Em um país onde a infraestrutura está destruída, a ajuda emergencial é vital para garantir a sobrevivência das famílias.</Text>
+          <BoldText>Seu apoio pode ajudar a aliviar o sofrimento de milhares de pessoas no Iémen, fornecendo abrigo e itens essenciais.</BoldText>
+        </TextContainer>
+      </SectionContainer>
+
+      {/* //Líbano */}
+      <SectionContainer id="libano">
+        <TextContainer>
+          <TipoDeDesastre>Conflito</TipoDeDesastre>
+          <Title>Líbano</Title>
+          <BoldText>O Líbano está lidando com os impactos de um longo conflito, afetando gravemente as famílias em várias regiões.</BoldText>
+          <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para as vítimas do conflito no Líbano.</Text>
+          <Text>A ajuda humanitária é essencial para garantir que as famílias afetadas tenham acesso a abrigo e recursos básicos.</Text>
+          <BoldText>Com sua doação, podemos oferecer apoio a mais famílias no Líbano, ajudando a reconstruir suas vidas após o conflito.</BoldText>
+        </TextContainer>
+        <CarrosselDeImagens images={[fotolibano1, fotolibano2]} />
+      </SectionContainer>
+
+      {/* //Paquistão */}
+      <SectionContainer id="paquistao">
+        <CarrosselDeImagens images={[fotopaquistao1, fotopaquistao2, fotopaquistao3]} />
+        <TextContainer>
+          <TipoDeDesastre>Enchentes</TipoDeDesastre>
+          <Title>Paquistão</Title>
+          <BoldText>O Paquistão está sofrendo com enchentes devastadoras, afetando milhões de pessoas.</BoldText>
+          <Text>Distribuímos tendas, redes contra mosquitos, luzes solares e kits de cozinha para aqueles que perderam suas casas nas enchentes.</Text>
+          <Text>A recuperação será longa, e sua ajuda pode garantir que mais pessoas tenham acesso a abrigos e suprimentos essenciais.</Text>
+          <BoldText>Contribua com sua doação para apoiar as vítimas das enchentes no Paquistão e em outras áreas afetadas por desastres naturais.</BoldText>
+        </TextContainer>
+      </SectionContainer>
+
+      {/* //Síria */}
+      <SectionContainer id="siria">
+        <TextContainer>
+          <TipoDeDesastre>Conflito</TipoDeDesastre>
+          <Title>Síria</Title>
+          <BoldText>A Síria continua a enfrentar os devastadores efeitos de anos de guerra civil, afetando gravemente a população.</BoldText>
+          <Text>Estamos fornecendo apoio emergencial, incluindo tendas, redes contra mosquitos, luzes solares e kits de cozinha para as famílias sírias.</Text>
+          <Text>A reconstrução será difícil, e sua ajuda pode garantir que as vítimas do conflito recebam o suporte necessário para recomeçar suas vidas.</Text>
+          <BoldText>Com sua doação, podemos continuar a oferecer ajuda essencial às famílias sírias, onde a necessidade é extrema.</BoldText>
+        </TextContainer>
+        <CarrosselDeImagens images={[fotosiria1, fotosiria2, fotosiria3]} />
+      </SectionContainer>
+
+
+    </div>
+  );
+}
+
+export default AfricaContrs;

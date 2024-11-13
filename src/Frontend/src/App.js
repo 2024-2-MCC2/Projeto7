@@ -15,7 +15,7 @@ import AfricaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/Afri
 import AsiaContrs from './Pages/OndeTrabalhamos/OndeTrabalhamosComponents/AsiaContrs.jsx';
 import Footer from './ComponentsGerais/Footer.js';
 import Contato from './Pages/Contato/Contato.js';
-import DesastresExplicados from './Pages/desastres/DesastresExplicados.jsx';
+import DesastresExplicados from './Pages/desastres/DesastresExplicados.jsx'
 import GlobalStyles from './createGlobalStyle.js';
 import Time from './Pages/Templates/Time.js';
 
