@@ -18,6 +18,7 @@ import Contato from './Pages/Contato/Contato.js';
 import DesastresExplicados from './Pages/desastres/DesastresExplicados.jsx'
 import GlobalStyles from './createGlobalStyle.js';
 import Time from './Pages/Templates/Time.js';
+import FacaPartedoTime from './Pages/FacaParte/FacaPartedoTime.js';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="ondetrabalhamos/africa" element={<AfricaContrs />} />
         <Route path="ondetrabalhamos/asia" element={<AsiaContrs />} />
         <Route path='/timedosite' element={<Time/>}/>
+        <Route path='/façaparte' element ={<FacaPartedoTime/>}/>
         {/* <Route path="/tomeacao" element={<TomeAcao/>}/>
       <Route path="/nosso" element={<NossoTrab/>}/> */}
       </Routes>
