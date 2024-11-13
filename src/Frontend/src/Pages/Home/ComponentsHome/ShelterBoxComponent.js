@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Estilos usando styled-components
+
 const ShelterBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #e0f7f4;
   padding: 50px;
-  /* margin: 20px 0; */
+ 
 `;
 
 const TextSection = styled.div`
@@ -20,8 +20,9 @@ const TextSection = styled.div`
   }
 
   p {
-    font-size: 20px;
-    color: #666;
+    font-size: 22px;
+    color: #333;
+    font-family:Arial, Helvetica, sans-serif;
     margin-top: 10px;
   }
 `;

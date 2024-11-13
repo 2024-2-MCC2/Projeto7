@@ -41,8 +41,9 @@ font-family: Arial, Helvetica, sans-serif;
 color: black;
 `
 const Text = styled.p`
-font-size: 23px;
+font-size: 22px;
 color: black;
+font-family:Arial, Helvetica, sans-serif;
 `
 
 const SaibaMaisBtn = styled.button`
@@ -55,7 +56,7 @@ const SaibaMaisBtn = styled.button`
   font-family: Arial, Helvetica, sans-serif;
   border: none;
   padding: 10px 20px;
-  border-radius: 2px;
+  border-radius: 5px;
   height: 60px;
   width: 160px;
   cursor: pointer;
@@ -85,7 +86,7 @@ function HistComponent() {
         Conheça as pessoas que seu apoio está ajudando e leia suas histórias poderosas.
         </Text>
         <SaibaMaisBtn>
-          <Link onClick={ScrollToTop} to="/saibamais">Saiba Mais</Link>
+          <Link onClick={ScrollToTop} to="/historias">Saiba Mais</Link>
         </SaibaMaisBtn>
       </div>
     </HistComponentWrapper>

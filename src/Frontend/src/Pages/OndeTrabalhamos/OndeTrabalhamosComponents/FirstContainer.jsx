@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from 'react-router-dom'
+import img from '../../../assets/img/ondeTrabalhamos.jpg'
 
 const GeneralContainer = styled.div`
     height: 500px;
@@ -37,7 +38,7 @@ function FirstContainer(){
     return(
 <GeneralContainer>
     <div>
-        <Image src='https://placehold.co/600x400/000000/FFFFFF/png'/>
+        <Image src={img}/>
     </div>
     <TextContainer>
         
