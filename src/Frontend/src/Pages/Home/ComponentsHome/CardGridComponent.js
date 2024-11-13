@@ -112,7 +112,7 @@ function CardGridComponent() {
   const cards = [
     { title: 'Onde trabalhamos', text: 'Obtenha as atualizações mais recentes para o nosso trabalho e descubra onde estamos apoiando comunidades em todo o mundo após desastres e conflitos.', link:'/ondetrabalhamos', image: image2 },
     { title: 'Desastres explicados', text: 'Tudo o que você precisa saber sobre desastres – desde eventos climáticos extremos até conflitos complexos.', link:'/desastres', image: image3 },
-    { title: 'Faça parte do time', text: 'Be part of the ShelterBox team and inspire your customers, engage your staff, and boost your performance.', link:'/façaparte', image: image6 }
+    { title: 'Faça parte do time', text: 'Faça parte da equipe da ShelterBox e inspire seus clientes, envolva sua equipe e aumente seu desempenho.', link:'/façaparte', image: image6 }
   ];
 
   return (

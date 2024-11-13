@@ -156,7 +156,11 @@ const OndeTrabalhamos = () => {
       {/* Seção Esquerda */}
       <LeftSection>
         <Title>Onde estamos <br /> trabalhamos?</Title>
-        <Text>Pequeno texto sobre onde trabalhamos</Text>
+        <Text>Neste momento, mais de 100 milhões de pessoas em todo o mundo ficaram desabrigadas por desastres e conflitos. A ShelterBox está trabalhando para mudar isso.
+
+Ao fornecer abrigo de emergência e ferramentas para famílias roubadas de suas casas por desastres, estamos transformando o desespero em esperança.
+
+Queremos ver um mundo onde nenhuma família seja deixada sem abrigo após o desastre. Junte-se a nós.</Text>
         <Buttons>
           {/* Botão "Doar" único */}
           <BtnDoar>
