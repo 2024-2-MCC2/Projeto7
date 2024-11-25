@@ -45,8 +45,6 @@ Levando em conta o item acima, o projeto ShelterBox fundado em 2000, tem como ob
   &emsp;|-->antigos<br>
   &emsp;|Documentação.docx<br>
 |-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
   &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
@@ -95,10 +93,5 @@ Coloque código do prompt de comnando se for necessário
 
 ## 🎓 Referências
 
-Aqui estão as referências usadas no projeto.
+1. <a href="https://shelterbox.org">ShelterBox.org</a>
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://creativecommons.org/share-your-work/>
-4. <https://freesound.org/>
-5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
