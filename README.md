@@ -72,7 +72,8 @@ Há também 4 pastas que seguem da seguinte forma:
 
 Não há instalação!
 Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
-<a href="https://shelterboxfecap-mccomp2.netlify.app">Link para o site no netlify<a>
+
+<a href="https://shelterboxfecap-mccomp2.netlify.app">Link para o site no netlify</a>
 
 ## 💻 Configuração para Desenvolvimento
 
@@ -80,16 +81,18 @@ Descreva como instalar todas as dependências para desenvolvimento e como rodar 
 
 Para abrir este projeto você necessita das seguintes ferramentas:
 
--<a href="https://godotengine.org/download">GODOT</a>
+-<a href="https://nodejs.org/pt">node.js</a>
+
+-<a href="https://code.visualstudio.com">visual studio code</a>
+
+Abra a pasta de frontend do projeto no visual studio e digite o seguinte comando no terminal:
 
 ```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
+npm start
 ```
 
 ## 📋 Licença/License
-
+ShelterBox Recreation © 2024 by FECAP, Felipe Wakasa, Gabriel Debastiani Davanço, Isadora Teixeira Santoma is licensed under CC BY-SA 4.0
 
 ## 🎓 Referências
 
